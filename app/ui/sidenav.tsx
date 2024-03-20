@@ -65,16 +65,10 @@ const Sidenav: React.FC = () => {
 	return (
 		<div className="bg-white sticky top-0 h-fit">
 			<Link href="/">
-				<Image
-					className="px-10 pt-2 pb-5 "
-					src="/image/logo.png"
-					width={600}
-					height={125}
-					alt="Logo"
-				/>
+				<Image className="px-10 pt-3 " src="/image/logo.png" width={600} height={125} alt="Logo" />
 			</Link>
 			<Menu
-				className="px-5 "
+				className="px-5 mt-5"
 				defaultSelectedKeys={["1"]}
 				// mode="inline"
 				// inlineCollapsed={collapsed}

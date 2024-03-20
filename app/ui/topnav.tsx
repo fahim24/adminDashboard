@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Topnav() {
 	return (
-		<div className="flex justify-between w-full bg-white px-5 py-2 items-center">
+		<div className="flex justify-between w-full bg-white px-5 py-2 items-center ">
 			<div className="flex gap-4 items-center">
 				<ToggleButton />
 				<Input placeholder="Search" className="bg-CBG rounded-full w-80" prefix={<CiSearch />} />
@@ -20,9 +20,9 @@ export default function Topnav() {
 				</div>
 				<div className="flex gap-3 items-center">
 					<label htmlFor="lang">
-						<Image src="/image/Flag.png" width={40} height={25} alt="Flag" />
+						<Image src="/image/Flag.png" width={40} height={27} alt="Flag" />
 					</label>
-					<select className="text-sm" name="lang" id="">
+					<select className="text-sm" name="lang" id="lang">
 						<option value="en">English</option>
 						<option value="bn">Bangla</option>
 					</select>

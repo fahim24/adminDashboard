@@ -15,6 +15,7 @@ const config: Config = {
 				CRed: "#F93C65",
 				CDark: "#202224",
 				CLight: "#606060",
+				COrange: "#FF8743",
 			},
 		},
 	},

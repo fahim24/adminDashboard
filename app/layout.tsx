@@ -25,7 +25,7 @@ export default function RootLayout({
 					</div>
 					<div className="w-full">
 						<Topnav />
-						<main className="p-5">{children}</main>
+						<main className="m-5">{children}</main>
 					</div>
 				</div>
 			</body>
