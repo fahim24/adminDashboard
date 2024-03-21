@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Nunito_Sans as NS } from "next/font/google";
 import "./globals.css";
-import Sidenav from "@/app/ui/sidenav";
-import Topnav from "@/app/ui/topnav";
+import Sidenav from "@/modules/sidenav";
+import Topnav from "@/modules/topnav";
 
 const ns = NS({ subsets: ["latin"] });
 

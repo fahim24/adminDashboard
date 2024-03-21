@@ -1,9 +1,9 @@
-import MySlider from "@/app/ui/MySlider";
-import MySlider2 from "@/app/ui/MySlider2";
+import MySlider from "@/modules/MySlider";
+import MySlider2 from "@/modules/MySlider2";
 import { Card } from "antd";
 import React from "react";
 import Image from "next/image";
-import MySlider3 from "@/app/ui/MySlider3";
+import MySlider3 from "@/modules/MySlider3";
 
 export default function Products() {
 	return (

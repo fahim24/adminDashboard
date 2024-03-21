@@ -2,7 +2,7 @@ import { Card, Select } from "antd";
 import Image from "next/image";
 import { AiOutlineFall, AiOutlineRise } from "react-icons/ai";
 import { FaCircle } from "react-icons/fa";
-import MySlider from "./ui/MySlider";
+import MySlider from "../modules/MySlider";
 
 // import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
 
