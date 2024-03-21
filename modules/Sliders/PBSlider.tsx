@@ -13,7 +13,7 @@ interface SliderSettings {
 	slidesToScroll: number;
 }
 
-export default function MySlider2(): JSX.Element {
+export default function PBSlider(): JSX.Element {
 	const settings: SliderSettings = {
 		dots: false,
 		infinite: true,

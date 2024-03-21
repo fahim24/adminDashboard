@@ -15,7 +15,7 @@ interface SliderSettings {
 	slidesToScroll: number;
 }
 
-export default function MySlider3(): JSX.Element {
+export default function PSlider(): JSX.Element {
 	let sliderRef = useRef<Slider>(null);
 	const next = () => {
 		sliderRef.current?.slickNext();

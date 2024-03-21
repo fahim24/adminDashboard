@@ -16,7 +16,7 @@ interface SliderSettings {
 	// prevArrow: React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
 }
 
-export default function MySlider(): JSX.Element {
+export default function FPSlider(): JSX.Element {
 	let sliderRef = useRef<Slider>(null);
 	const next = () => {
 		sliderRef.current?.slickNext();

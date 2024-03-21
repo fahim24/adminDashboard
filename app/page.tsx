@@ -1,23 +1,37 @@
-import { Card, Select } from "antd";
+// Import from next
 import Image from "next/image";
+// Import from antd
+import { Card, Select } from "antd";
+// Import from react-icons
+import { BsBoxFill } from "react-icons/bs";
+import { GiBackwardTime } from "react-icons/gi";
 import { AiOutlineFall, AiOutlineRise } from "react-icons/ai";
-import { FaCircle } from "react-icons/fa";
-import MySlider from "@/modules/Sliders/MySlider";
+import { FaChartLine, FaCircle, FaUserFriends } from "react-icons/fa";
+// Imported modules
+import FPSlider from "@/modules/Sliders/FPSlider";
+import { RevenueChart } from "@/modules/Charts/RevenueChart";
+import { CustomersChart } from "@/modules/Charts/CustomersChart";
 import { SalesDetailsChart } from "@/modules/Charts/SalesDetailsChart";
+import { SalesAnalyticsChart } from "@/modules/Charts/SalesAnalyticsChart";
 
 export default function Dashboard() {
 	return (
+		// Dashboard Page Start
 		<div className="space-y-5">
-			<p className="text-3xl text-CDark font-bold">Dashboard</p>
+			{/* Page Heading Start*/}
+			<h1 className="text-3xl text-CDark font-bold">Dashboard</h1>
+			{/* Page Content Start*/}
+			{/* Stats Start */}
 			<div className="grid grid-cols-4 gap-5 ">
+				{/* Total User Start */}
 				<Card>
 					<div className="flex justify-between">
 						<div>
 							<p className="text-CLight font-semibold">Total User</p>
-							<p className="text-3xl text-CDark font-bold mt-3 mb-5">40,689</p>
+							<p className="text-3xl text-CDark font-bold mt-3 mb-5">60,689</p>
 						</div>
-						<div>
-							<Image src="/image/userIcon.png" width={60} height={60} alt="User icon" />
+						<div className="flex justify-center items-center size-14 bg-CBlue bg-opacity-20 rounded-2xl">
+							<FaUserFriends className="text-CBlue text-3xl" />
 						</div>
 					</div>
 					<p className="flex gap-1 font-semibold text-CLight">
@@ -27,14 +41,15 @@ export default function Dashboard() {
 						Up from yesterday
 					</p>
 				</Card>
+				{/* Total Order Start */}
 				<Card>
 					<div className="flex justify-between">
 						<div>
 							<p className="text-CLight font-semibold">Total Order</p>
-							<p className="text-3xl text-CDark font-bold mt-3 mb-5">10293</p>
+							<p className="text-3xl text-CDark font-bold mt-3 mb-5">10,293</p>
 						</div>
-						<div>
-							<Image src="/image/orderIcon.png" width={60} height={60} alt="Order icon" />
+						<div className="flex justify-center items-center size-14 bg-COrange bg-opacity-20 rounded-2xl">
+							<BsBoxFill className="text-COrange text-3xl" />
 						</div>
 					</div>
 					<p className="flex gap-1 font-semibold text-CLight">
@@ -44,14 +59,15 @@ export default function Dashboard() {
 						Up from past week
 					</p>
 				</Card>
+				{/* Total Sales Start */}
 				<Card>
 					<div className="flex justify-between">
 						<div>
 							<p className="text-CLight font-semibold">Total Sales</p>
 							<p className="text-3xl text-CDark font-bold mt-3 mb-5">$89,000</p>
 						</div>
-						<div>
-							<Image src="/image/salesIcon.png" width={60} height={60} alt="Sales icon" />
+						<div className="flex justify-center items-center size-14 bg-CGreen bg-opacity-20 rounded-2xl">
+							<FaChartLine className="text-CGreen text-3xl" />
 						</div>
 					</div>
 					<p className="flex gap-1 font-semibold text-CLight">
@@ -61,14 +77,15 @@ export default function Dashboard() {
 						Down from yesterday
 					</p>
 				</Card>
+				{/* Total Pending Start */}
 				<Card>
 					<div className="flex justify-between">
 						<div>
 							<p className="text-CLight font-semibold">Total Pending</p>
-							<p className="text-3xl text-CDark font-bold mt-3 mb-5">2040</p>
+							<p className="text-3xl text-CDark font-bold mt-3 mb-5">2,040</p>
 						</div>
-						<div>
-							<Image src="/image/pendingIcon.png" width={60} height={60} alt="Pending icon" />
+						<div className="flex justify-center items-center size-14 bg-CRed bg-opacity-20 rounded-2xl">
+							<GiBackwardTime className="text-CRed text-3xl" />
 						</div>
 					</div>
 					<p className="flex gap-1 font-semibold text-CLight">
@@ -79,6 +96,7 @@ export default function Dashboard() {
 					</p>
 				</Card>
 			</div>
+			{/* Sales Charts Start */}
 			<Card>
 				<div className="flex justify-between mb-5">
 					<p className="text-2xl font-bold">Sales Details</p>
@@ -106,6 +124,7 @@ export default function Dashboard() {
 					<SalesDetailsChart />
 				</div>
 			</Card>
+			{/* Deals Details Start */}
 			<Card>
 				<div className="flex justify-between mb-5">
 					<p className="text-2xl font-bold">Deals Details</p>
@@ -184,6 +203,7 @@ export default function Dashboard() {
 					</table>
 				</div>
 			</Card>
+			{/* Revenue Chart Start */}
 			<Card>
 				<div className="flex justify-between mb-10">
 					<p className="text-2xl font-bold">Revenue</p>
@@ -206,17 +226,21 @@ export default function Dashboard() {
 						]}
 					/>
 				</div>
-				<div>
-					<Image src="/image/revenueGraph.png" width={1070} height={270} alt="revenue graph" />
+				<div className="h-[270px] w-full">
+					{/* <Image src="/image/revenueGraph.png" width={1070} height={270} alt="revenue graph" /> */}
+					<RevenueChart />
 				</div>
 			</Card>
+			{/* Other Stats Start */}
 			<div className="grid grid-cols-3 gap-5 ">
+				{/* Customers Stats Start */}
 				<Card>
 					<p className="text-2xl font-bold mb-5">Customers</p>
 					<div className="flex justify-center items-center">
-						<Image src="/image/customersGraph.png" width={148} height={148} alt="Customer Graph" />
+						{/* <Image src="/image/customersGraph.png" width={148} height={148} alt="Customer Graph" /> */}
+						<CustomersChart />
 					</div>
-					<div className="flex gap-16 mt-5">
+					<div className="flex justify-between items-center mt-5">
 						<div className="space-y-2 text-center">
 							<p className="text-3xl font-bold">34,249</p>
 							<p className="flex gap-1 items-center font-semibold">
@@ -224,24 +248,28 @@ export default function Dashboard() {
 							</p>
 						</div>
 						<div className="space-y-2 text-center">
-							<p className="text-3xl font-bold">1420</p>
+							<p className="text-3xl font-bold">14,020</p>
 							<p className="flex gap-1 items-center font-semibold">
-								<FaCircle className="text-CBlue opacity-20" /> Repeated
+								<FaCircle className="text-CBlue opacity-20" /> Repeated Customers
 							</p>
 						</div>
 					</div>
 				</Card>
+				{/* Featured Product Start */}
 				<Card>
 					<p className="text-2xl font-bold mb-5">Featured Product</p>
-					<MySlider />
+					<FPSlider />
 				</Card>
+				{/* Sales Analytics Start */}
 				<Card>
 					<p className="text-2xl font-bold mb-5">Sales Analytics</p>
-					<div>
-						<Image src="/image/salesGraph2.png" width={328} height={270} alt="sales analytics" />
+					<div className="h-[270px] w-full">
+						{/* <Image src="/image/salesGraph2.png" width={328} height={270} alt="sales analytics" /> */}
+						<SalesAnalyticsChart />
 					</div>
 				</Card>
 			</div>
+			{/* Page Content End */}
 		</div>
 	);
 }
