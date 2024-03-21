@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "antd": "^5.15.3",
     "chart.js": "^4.4.2",
     "next": "14.1.3",

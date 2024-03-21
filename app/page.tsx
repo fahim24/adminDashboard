@@ -2,48 +2,10 @@ import { Card, Select } from "antd";
 import Image from "next/image";
 import { AiOutlineFall, AiOutlineRise } from "react-icons/ai";
 import { FaCircle } from "react-icons/fa";
-import MySlider from "../modules/MySlider";
-
-// import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
+import MySlider from "@/modules/Sliders/MySlider";
+import { SalesDetailsChart } from "@/modules/Charts/SalesDetailsChart";
 
 export default function Dashboard() {
-	// const data = [
-	// 	{
-	// 		name: "Page A",
-	// 		uv: 4000,
-	// 		amt: 2400,
-	// 	},
-	// 	{
-	// 		name: "Page B",
-	// 		uv: 3000,
-	// 		amt: 2210,
-	// 	},
-	// 	{
-	// 		name: "Page C",
-	// 		uv: 2000,
-	// 		amt: 2290,
-	// 	},
-	// 	{
-	// 		name: "Page D",
-	// 		uv: 2780,
-	// 		amt: 2000,
-	// 	},
-	// 	{
-	// 		name: "Page E",
-	// 		uv: 1890,
-	// 		amt: 2181,
-	// 	},
-	// 	{
-	// 		name: "Page F",
-	// 		uv: 2390,
-	// 		amt: 2500,
-	// 	},
-	// 	{
-	// 		name: "Page G",
-	// 		uv: 3490,
-	// 		amt: 2100,
-	// 	},
-	// ];
 	return (
 		<div className="space-y-5">
 			<p className="text-3xl text-CDark font-bold">Dashboard</p>
@@ -139,26 +101,9 @@ export default function Dashboard() {
 						]}
 					/>
 				</div>
-				<div>
-					<Image src="/image/salesGraph.png" width={1070} height={270} alt="sales graph" />
-					{/* <AreaChart
-						width={1070}
-						height={270}
-						data={data}
-						margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-						<defs>
-							<linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-								<stop offset="30%" stopColor="#4880FF" stopOpacity={0.16} />
-								<stop offset="70%" stopColor="#4880FF" stopOpacity={0} />
-							</linearGradient>
-						</defs>
-						<XAxis dataKey="amt" />
-						<YAxis />
-						<CartesianGrid strokeDasharray="3 3" />
-						<Tooltip />
-
-						<Area dataKey="uv" stroke="#4880FF" fillOpacity={1} fill="url(#colorUv)" />
-					</AreaChart> */}
+				<div className="h-[270px] w-full">
+					{/* <Image src="/image/salesGraph.png" width={1070} height={270} alt="sales graph" /> */}
+					<SalesDetailsChart />
 				</div>
 			</Card>
 			<Card>
