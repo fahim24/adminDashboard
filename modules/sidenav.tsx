@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import React, { useContext } from "react";
 import { Menu, MenuProps } from "antd";
 import { RiDashboard3Line, RiHeartLine, RiLayoutGridLine, RiSettings3Line } from "react-icons/ri";
 import { PiChats, PiGridNine, PiListChecks, PiMoneyBold, PiPower } from "react-icons/pi";
@@ -13,6 +14,7 @@ import {
 } from "react-icons/lia";
 import Link from "next/link";
 import Image from "next/image";
+import { useMenuToggleContext } from "@/modules/Contexts/MenuToggleContext";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -35,10 +37,10 @@ function getItem(
 const items: MenuItem[] = [
 	getItem(<Link href="/">Dashboard</Link>, "1", <RiDashboard3Line />),
 	getItem(<Link href="/products">Products</Link>, "2", <RiLayoutGridLine />),
-	getItem("Favorites", "3", <RiHeartLine />),
-	getItem("Inbox", "4", <PiChats />),
-	getItem("Order List", "5", <PiListChecks />),
-	getItem("Product Stock", "6", <MdOutlineTableRows />),
+	getItem(<Link href="/favorites">Favorites</Link>, "3", <RiHeartLine />),
+	getItem(<Link href="/inbox">Inbox</Link>, "4", <PiChats />),
+	getItem(<Link href="/order-lists">Order List</Link>, "5", <PiListChecks />),
+	getItem(<Link href="/product-stocks">Product Stock</Link>, "6", <MdOutlineTableRows />),
 	{ type: "divider" },
 	getItem(
 		"PAGES",
@@ -62,16 +64,27 @@ const items: MenuItem[] = [
 ];
 
 const Sidenav: React.FC = () => {
+	const { collapsed } = useMenuToggleContext();
 	return (
 		<div className="bg-white sticky top-0 h-fit">
 			<Link href="/">
-				<Image className="px-10 pt-3 " src="/image/logo.png" width={600} height={125} alt="Logo" />
+				<div className="p-5">
+					{collapsed ? (
+						<div className="w-10">
+							<Image src="/image/logo.png" width={600} height={125} alt="Logo" />
+						</div>
+					) : (
+						<div className="w-40">
+							<Image src="/image/logo.png" width={600} height={125} alt="Logo" />
+						</div>
+					)}
+				</div>
 			</Link>
 			<Menu
-				className="px-5 mt-5"
+				className="px-5"
 				defaultSelectedKeys={["1"]}
-				// mode="inline"
-				// inlineCollapsed={collapsed}
+				mode="inline"
+				inlineCollapsed={collapsed}
 				items={items}
 			/>
 		</div>

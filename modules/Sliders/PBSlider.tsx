@@ -1,20 +1,12 @@
 "use client";
 import React from "react";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-interface SliderSettings {
-	dots: boolean;
-	infinite: boolean;
-	speed: number;
-	slidesToShow: number;
-	slidesToScroll: number;
-}
-
 export default function PBSlider(): JSX.Element {
-	const settings: SliderSettings = {
+	const settings: Settings = {
 		dots: false,
 		infinite: true,
 		speed: 500,

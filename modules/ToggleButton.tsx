@@ -1,18 +1,20 @@
 "use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { RiMenuFill } from "react-icons/ri";
+import { useMenuToggleContext } from "@/modules/Contexts/MenuToggleContext";
 
-export default function ToggleButton() {
-	const [collapsed, setCollapsed] = useState(false);
-
+const ToggleButton: React.FC = () => {
+	const { collapsed, setCollapsed } = useMenuToggleContext();
 	const toggleCollapsed = () => {
 		setCollapsed(!collapsed);
 	};
 
 	return (
+		// <button>
 		<button onClick={toggleCollapsed}>
 			<RiMenuFill className="text-2xl" />
 		</button>
 	);
-}
+};
+
+export default ToggleButton;

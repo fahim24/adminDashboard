@@ -1,19 +1,11 @@
 "use client";
 import React, { useRef } from "react";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import Image from "next/image";
-
-interface SliderSettings {
-	dots: boolean;
-	infinite: boolean;
-	speed: number;
-	slidesToShow: number;
-	slidesToScroll: number;
-}
 
 export default function PSlider(): JSX.Element {
 	let sliderRef = useRef<Slider>(null);
@@ -23,9 +15,10 @@ export default function PSlider(): JSX.Element {
 	const previous = () => {
 		sliderRef.current?.slickPrev();
 	};
-	const settings: SliderSettings = {
+	const settings: Settings = {
 		dots: false,
 		infinite: true,
+		arrows: false,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,

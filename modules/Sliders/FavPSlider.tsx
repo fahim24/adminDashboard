@@ -5,8 +5,9 @@ import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Image from "next/image";
 
-export default function FPSlider(): JSX.Element {
+export default function FavPSlider(): JSX.Element {
 	let sliderRef = useRef<Slider>(null);
 	const next = () => {
 		sliderRef.current?.slickNext();
@@ -24,21 +25,12 @@ export default function FPSlider(): JSX.Element {
 	};
 	return (
 		<>
-			<Slider className="w-4/5 mx-auto" ref={sliderRef} {...settings}>
-				<div className=" bg-CGreen text-white font-bold h-48 ">
-					<span className="size-full flex justify-center items-center text-6xl">1</span>
-					<p className="font-bold text-center mt-3 text-CDark">Beats Headphone 2019</p>
-					<p className="text-CBlue text-center">$89.00</p>
+			<Slider ref={sliderRef} {...settings}>
+				<div className="">
+					<Image src="/image/Fav_product.png" alt="product image" height={317} width={361} />
 				</div>
-				<div className=" bg-CGreen text-white font-bold h-48">
-					<span className="size-full flex justify-center items-center text-6xl">2</span>
-					<p className="font-bold text-center mt-3 text-CDark">Beats Headphone 2019</p>
-					<p className="text-CBlue text-center">$89.00</p>
-				</div>
-				<div className=" bg-CGreen text-white font-bold h-48 ">
-					<span className="size-full flex justify-center items-center text-6xl">3</span>
-					<p className="font-bold text-center mt-3 text-CDark">Beats Headphone 2019</p>
-					<p className="text-CBlue text-center">$89.00</p>
+				<div className=" ">
+					<Image src="/image/Fav_product.png" alt="product image" height={317} width={361} />
 				</div>
 			</Slider>
 			<button

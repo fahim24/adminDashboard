@@ -6,6 +6,11 @@ import { Card, Rate } from "antd";
 import PSlider from "@/modules/Sliders/PSlider";
 import PBSlider from "@/modules/Sliders/PBSlider";
 import { RiHeartLine } from "react-icons/ri";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Products",
+};
 
 export default function Products() {
 	return (

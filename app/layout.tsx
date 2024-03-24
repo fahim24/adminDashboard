@@ -3,6 +3,7 @@ import { Nunito_Sans as NS } from "next/font/google";
 import "./globals.css";
 import Sidenav from "@/modules/sidenav";
 import Topnav from "@/modules/topnav";
+import { MenuToggleProvider } from "@/modules/Contexts/MenuToggleContext";
 
 const ns = NS({ subsets: ["latin"] });
 
@@ -19,15 +20,17 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={ns.className}>
-				<div className=" flex bg-CBG">
-					<div className="w-[240px]">
-						<Sidenav />
+				<MenuToggleProvider>
+					<div className=" flex bg-CBG">
+						<div className="w-fit">
+							<Sidenav />
+						</div>
+						<div className=" flex-auto">
+							<Topnav />
+							<main className="m-5">{children}</main>
+						</div>
 					</div>
-					<div className="w-full">
-						<Topnav />
-						<main className="m-5">{children}</main>
-					</div>
-				</div>
+				</MenuToggleProvider>
 			</body>
 		</html>
 	);

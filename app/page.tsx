@@ -97,140 +97,146 @@ export default function Dashboard() {
 				</Card>
 			</div>
 			{/* Sales Charts Start */}
-			<Card>
-				<div className="flex justify-between mb-5">
-					<p className="text-2xl font-bold">Sales Details</p>
-					<Select
-						defaultValue="jan"
-						className="w-32"
-						options={[
-							{ value: "jan", label: "January" },
-							{ value: "feb", label: "February" },
-							{ value: "mar", label: "March" },
-							{ value: "apr", label: "April" },
-							{ value: "may", label: "May" },
-							{ value: "jun", label: "June" },
-							{ value: "jul", label: "July" },
-							{ value: "aug", label: "August" },
-							{ value: "sep", label: "September" },
-							{ value: "oct", label: "October" },
-							{ value: "nov", label: "November" },
-							{ value: "dec", label: "December" },
-						]}
-					/>
-				</div>
-				<div className="h-[270px] w-full">
-					{/* <Image src="/image/salesGraph.png" width={1070} height={270} alt="sales graph" /> */}
-					<SalesDetailsChart />
-				</div>
-			</Card>
+			<div className="grid grid-cols-1">
+				<Card>
+					<div className="flex justify-between mb-5">
+						<p className="text-2xl font-bold">Sales Details</p>
+						<Select
+							defaultValue="jan"
+							className="w-32"
+							options={[
+								{ value: "jan", label: "January" },
+								{ value: "feb", label: "February" },
+								{ value: "mar", label: "March" },
+								{ value: "apr", label: "April" },
+								{ value: "may", label: "May" },
+								{ value: "jun", label: "June" },
+								{ value: "jul", label: "July" },
+								{ value: "aug", label: "August" },
+								{ value: "sep", label: "September" },
+								{ value: "oct", label: "October" },
+								{ value: "nov", label: "November" },
+								{ value: "dec", label: "December" },
+							]}
+						/>
+					</div>
+					<div className="h-[270px] w-full">
+						{/* <Image src="/image/salesGraph.png" width={1070} height={270} alt="sales graph" /> */}
+						<SalesDetailsChart />
+					</div>
+				</Card>
+			</div>
 			{/* Deals Details Start */}
-			<Card>
-				<div className="flex justify-between mb-5">
-					<p className="text-2xl font-bold">Deals Details</p>
-					<Select
-						defaultValue="jan"
-						className="w-32"
-						options={[
-							{ value: "jan", label: "January" },
-							{ value: "feb", label: "February" },
-							{ value: "mar", label: "March" },
-							{ value: "apr", label: "April" },
-							{ value: "may", label: "May" },
-							{ value: "jun", label: "June" },
-							{ value: "jul", label: "July" },
-							{ value: "aug", label: "August" },
-							{ value: "sep", label: "September" },
-							{ value: "oct", label: "October" },
-							{ value: "nov", label: "November" },
-							{ value: "dec", label: "December" },
-						]}
-					/>
-				</div>
-				<div>
-					<table className="table-auto w-full">
-						<thead className="">
-							<tr className="bg-CBG text-left ">
-								<th className="px-5 py-3 rounded-l-2xl">Product Name</th>
-								<th>Location</th>
-								<th>Date - Time</th>
-								<th>Piece</th>
-								<th>Amount</th>
-								<th className="rounded-r-2xl">Status</th>
-							</tr>
-						</thead>
-						<tbody className="divide-y">
-							<tr className="font-semibold hover:bg-gray-100 ">
-								<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
-									<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
-									Apple Watch
-								</td>
-								<td>6096 Marjolaine Landing</td>
-								<td>12.09.2019 - 12.53 PM</td>
-								<td>423</td>
-								<td>$34,295</td>
-								<td>
-									<span className="bg-CGreen text-white rounded-full px-3 py-1 ">Delivered</span>
-								</td>
-							</tr>
-							<tr className="font-semibold hover:bg-gray-100">
-								<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
-									<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
-									Apple Watch
-								</td>
-								<td>6096 Marjolaine Landing</td>
-								<td>12.09.2019 - 12.53 PM</td>
-								<td>423</td>
-								<td>$34,295</td>
-								<td>
-									<span className="bg-CRed text-white rounded-full px-3 py-1 ">On Hold</span>
-								</td>
-							</tr>
-							<tr className="font-semibold hover:bg-gray-100">
-								<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
-									<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
-									Apple Watch
-								</td>
-								<td>6096 Marjolaine Landing</td>
-								<td>12.09.2019 - 12.53 PM</td>
-								<td>423</td>
-								<td>$34,295</td>
-								<td>
-									<span className="bg-CBlue text-white rounded-full px-3 py-1 ">Processing</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</Card>
+			<div className="grid grid-cols-1">
+				<Card>
+					<div className="flex justify-between mb-5">
+						<p className="text-2xl font-bold">Deals Details</p>
+						<Select
+							defaultValue="jan"
+							className="w-32"
+							options={[
+								{ value: "jan", label: "January" },
+								{ value: "feb", label: "February" },
+								{ value: "mar", label: "March" },
+								{ value: "apr", label: "April" },
+								{ value: "may", label: "May" },
+								{ value: "jun", label: "June" },
+								{ value: "jul", label: "July" },
+								{ value: "aug", label: "August" },
+								{ value: "sep", label: "September" },
+								{ value: "oct", label: "October" },
+								{ value: "nov", label: "November" },
+								{ value: "dec", label: "December" },
+							]}
+						/>
+					</div>
+					<div>
+						<table className="table-auto w-full">
+							<thead className="">
+								<tr className="bg-CBG text-left ">
+									<th className="px-5 py-3 rounded-l-2xl">Product Name</th>
+									<th>Location</th>
+									<th>Date - Time</th>
+									<th>Piece</th>
+									<th>Amount</th>
+									<th className="rounded-r-2xl">Status</th>
+								</tr>
+							</thead>
+							<tbody className="divide-y">
+								<tr className="font-semibold hover:bg-gray-100 ">
+									<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
+										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
+										Apple Watch
+									</td>
+									<td>6096 Marjolaine Landing</td>
+									<td>12.09.2019 - 12.53 PM</td>
+									<td>423</td>
+									<td>$34,295</td>
+									<td>
+										<span className="bg-CGreen text-white rounded-full px-3 py-1 ">Delivered</span>
+									</td>
+								</tr>
+								<tr className="font-semibold hover:bg-gray-100">
+									<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
+										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
+										Apple Watch
+									</td>
+									<td>6096 Marjolaine Landing</td>
+									<td>12.09.2019 - 12.53 PM</td>
+									<td>423</td>
+									<td>$34,295</td>
+									<td>
+										<span className="bg-CRed text-white rounded-full px-3 py-1 ">On Hold</span>
+									</td>
+								</tr>
+								<tr className="font-semibold hover:bg-gray-100">
+									<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
+										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
+										Apple Watch
+									</td>
+									<td>6096 Marjolaine Landing</td>
+									<td>12.09.2019 - 12.53 PM</td>
+									<td>423</td>
+									<td>$34,295</td>
+									<td>
+										<span className="bg-CBlue text-white rounded-full px-3 py-1 ">Processing</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</Card>
+			</div>
 			{/* Revenue Chart Start */}
-			<Card>
-				<div className="flex justify-between mb-10">
-					<p className="text-2xl font-bold">Revenue</p>
-					<Select
-						defaultValue="jan"
-						className="w-32"
-						options={[
-							{ value: "jan", label: "January" },
-							{ value: "feb", label: "February" },
-							{ value: "mar", label: "March" },
-							{ value: "apr", label: "April" },
-							{ value: "may", label: "May" },
-							{ value: "jun", label: "June" },
-							{ value: "jul", label: "July" },
-							{ value: "aug", label: "August" },
-							{ value: "sep", label: "September" },
-							{ value: "oct", label: "October" },
-							{ value: "nov", label: "November" },
-							{ value: "dec", label: "December" },
-						]}
-					/>
-				</div>
-				<div className="h-[270px] w-full">
-					{/* <Image src="/image/revenueGraph.png" width={1070} height={270} alt="revenue graph" /> */}
-					<RevenueChart />
-				</div>
-			</Card>
+			<div className="grid grid-cols-1">
+				<Card>
+					<div className="flex justify-between mb-10">
+						<p className="text-2xl font-bold">Revenue</p>
+						<Select
+							defaultValue="jan"
+							className="w-32"
+							options={[
+								{ value: "jan", label: "January" },
+								{ value: "feb", label: "February" },
+								{ value: "mar", label: "March" },
+								{ value: "apr", label: "April" },
+								{ value: "may", label: "May" },
+								{ value: "jun", label: "June" },
+								{ value: "jul", label: "July" },
+								{ value: "aug", label: "August" },
+								{ value: "sep", label: "September" },
+								{ value: "oct", label: "October" },
+								{ value: "nov", label: "November" },
+								{ value: "dec", label: "December" },
+							]}
+						/>
+					</div>
+					<div className="h-[270px] w-full">
+						{/* <Image src="/image/revenueGraph.png" width={1070} height={270} alt="revenue graph" /> */}
+						<RevenueChart />
+					</div>
+				</Card>
+			</div>
 			{/* Other Stats Start */}
 			<div className="grid grid-cols-3 gap-5 ">
 				{/* Customers Stats Start */}
