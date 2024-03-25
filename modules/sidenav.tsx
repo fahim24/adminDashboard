@@ -47,20 +47,20 @@ const items: MenuItem[] = [
 		"grp",
 		null,
 		[
-			getItem("Pricing", "7", <LiaGiftSolid />),
-			getItem("Calendar", "8", <LiaCalendarSolid />),
-			getItem("To-Do", "9", <LiaClipboard />),
-			getItem("Contact", "10", <LiaUserFriendsSolid />),
-			getItem("Invoice", "11", <PiMoneyBold />),
-			getItem("UI Elements", "12", <LiaChartBarSolid />),
-			getItem("Team", "13", <LiaUser />),
-			getItem("Table", "14", <PiGridNine />),
+			getItem(<Link href="/pricing">Pricing</Link>, "7", <LiaGiftSolid />),
+			getItem(<Link href="/calendar">Calendar</Link>, "8", <LiaCalendarSolid />),
+			getItem(<Link href="/to-do">To-Do</Link>, "9", <LiaClipboard />),
+			getItem(<Link href="/contacts">Contact</Link>, "10", <LiaUserFriendsSolid />),
+			getItem(<Link href="/invoices">Invoice</Link>, "11", <PiMoneyBold />),
+			getItem(<Link href="/ui-elements">UI Elements</Link>, "12", <LiaChartBarSolid />),
+			getItem(<Link href="/team">Team</Link>, "13", <LiaUser />),
+			getItem(<Link href="/tables">Table</Link>, "14", <PiGridNine />),
 		],
 		"group"
 	),
 	{ type: "divider" },
-	getItem("Settings", "15", <RiSettings3Line />),
-	getItem("Logout", "16", <PiPower />),
+	getItem(<Link href="/settings">Settings</Link>, "15", <RiSettings3Line />),
+	getItem(<Link href="/logout">Logout</Link>, "16", <PiPower />),
 ];
 
 const Sidenav: React.FC = () => {
