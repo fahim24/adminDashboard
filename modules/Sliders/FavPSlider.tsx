@@ -27,10 +27,10 @@ export default function FavPSlider(): JSX.Element {
 		<>
 			<Slider ref={sliderRef} {...settings}>
 				<div className="">
-					<Image src="/image/Fav_product.png" alt="product image" height={317} width={361} />
+					<Image src="/image/fav_product.png" alt="product image" height={317} width={361} />
 				</div>
 				<div className=" ">
-					<Image src="/image/Fav_product.png" alt="product image" height={317} width={361} />
+					<Image src="/image/fav_product.png" alt="product image" height={317} width={361} />
 				</div>
 			</Slider>
 			<button

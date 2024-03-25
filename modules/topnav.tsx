@@ -1,5 +1,5 @@
 import React from "react";
-import ToggleButton from "./ToggleButton";
+import ToggleButton from "./buttons/ToggleButton";
 import { Badge, Divider, Input, Popover, Select } from "antd";
 import { CiCircleChevDown, CiSearch } from "react-icons/ci";
 import {
