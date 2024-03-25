@@ -66,7 +66,7 @@ const items: MenuItem[] = [
 const Sidenav: React.FC = () => {
 	const { collapsed } = useMenuToggleContext();
 	return (
-		<div className="bg-white sticky top-0 h-fit">
+		<div id="sideMenu" className="bg-white overflow-y-scroll sticky top-0 h-screen">
 			<Link href="/">
 				<div className="p-5">
 					{collapsed ? (

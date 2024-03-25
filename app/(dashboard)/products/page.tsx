@@ -8,6 +8,7 @@ import PBSlider from "@/modules/Sliders/PBSlider";
 import { RiHeartLine } from "react-icons/ri";
 import { Metadata } from "next";
 
+// Title and Metadata for the products Page
 export const metadata: Metadata = {
 	title: "Products",
 };

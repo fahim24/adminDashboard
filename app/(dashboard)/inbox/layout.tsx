@@ -9,7 +9,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 				<div>
 					<InboxMenu />
 				</div>
-				<div>{children}</div>
+				<div className="w-full">{children}</div>
 			</div>
 		</div>
 	);

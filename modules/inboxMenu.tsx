@@ -1,16 +1,12 @@
 import React from "react";
 import { Menu, MenuProps } from "antd";
-import { PiGridNine, PiMoneyBold } from "react-icons/pi";
-import {
-	LiaCalendarSolid,
-	LiaChartBarSolid,
-	LiaClipboard,
-	LiaGiftSolid,
-	LiaUser,
-	LiaUserFriendsSolid,
-} from "react-icons/lia";
+import { PiMoneyBold } from "react-icons/pi";
+import { LiaChartBarSolid, LiaClipboard, LiaUserFriendsSolid } from "react-icons/lia";
 import Link from "next/link";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaRegEnvelope, FaRegPaperPlane, FaRegSquare, FaRegStar } from "react-icons/fa";
+import { SlPencil } from "react-icons/sl";
+import { BsExclamationTriangle } from "react-icons/bs";
+import { RiChatSettingsLine, RiDeleteBinLine } from "react-icons/ri";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -32,24 +28,59 @@ function getItem(
 
 const items: MenuItem[] = [
 	getItem(
-		<span className="bg-CBlue text-white flex gap-2 items-center w-full rounded-lg px-5">
-			<FaPlus />
-			Compose
-		</span>,
-		"1"
-	),
-	getItem(
 		"My Email",
 		"Emailgrp",
 		null,
 		[
-			getItem("Inbox", "2", <LiaGiftSolid />),
-			getItem("Starred", "3", <LiaCalendarSolid />),
-			getItem("Sent", "4", <LiaClipboard />),
-			getItem("Draft", "5", <LiaUserFriendsSolid />),
-			getItem("Spam", "6", <PiMoneyBold />),
-			getItem("Important", "7", <LiaChartBarSolid />),
-			getItem("Bin", "8", <LiaUser />),
+			getItem(
+				<Link href="/inbox">
+					<span>Inbox</span> <span className="float-right">1253</span>
+				</Link>,
+				"1",
+				<FaRegEnvelope />
+			),
+			getItem(
+				<Link href="/inbox/starred">
+					<span>Starred</span> <span className="float-right">245</span>
+				</Link>,
+				"2",
+				<FaRegStar />
+			),
+			getItem(
+				<Link href="/inbox/sent">
+					<span>Sent</span> <span className="float-right">24,532</span>
+				</Link>,
+				"3",
+				<FaRegPaperPlane />
+			),
+			getItem(
+				<Link href="/inbox/drafts">
+					<span>Draft</span> <span className="float-right">9</span>
+				</Link>,
+				"4",
+				<SlPencil />
+			),
+			getItem(
+				<Link href="inbox/spam">
+					<span>Spam</span> <span className="float-right">14</span>
+				</Link>,
+				"5",
+				<BsExclamationTriangle />
+			),
+			getItem(
+				<Link href="/inbox/important">
+					<span>Important</span> <span className="float-right">18</span>
+				</Link>,
+				"6",
+				<RiChatSettingsLine />
+			),
+			getItem(
+				<Link href="/inbox/trash">
+					<span>Bin</span> <span className="float-right">9</span>
+				</Link>,
+				"7",
+				<RiDeleteBinLine />
+			),
 		],
 		"group"
 	),
@@ -58,10 +89,27 @@ const items: MenuItem[] = [
 		"Labelgrp",
 		null,
 		[
-			getItem("Primary", "9", <LiaClipboard />),
-			getItem("Social", "10", <LiaUserFriendsSolid />),
-			getItem("Work", "11", <PiMoneyBold />),
-			getItem("friends", "12", <LiaChartBarSolid />),
+			getItem(
+				<Link href="/inbox/label/primary">Primary</Link>,
+				"8",
+				<FaRegSquare style={{ color: "rgb(0, 182, 155)" }} />
+			),
+			getItem(
+				<Link href="/inbox/label/social">Social</Link>,
+				"9",
+				<FaRegSquare style={{ color: "rgb(72, 128, 255)" }} />
+			),
+			getItem(
+				<Link href="/inbox/label/work">Work</Link>,
+				"10",
+				<FaRegSquare style={{ color: "rgb(255, 135, 67)" }} />
+			),
+			getItem(
+				<Link href="/inbox/label/friends">Friends</Link>,
+				"11",
+				<FaRegSquare style={{ color: "rgb(158, 143, 255)" }} />
+			),
+			getItem("Create New Label", "12", <FaPlus />),
 		],
 		"group"
 	),
@@ -69,8 +117,17 @@ const items: MenuItem[] = [
 
 const InboxMenu: React.FC = () => {
 	return (
-		<div id="inbox-menu">
-			<Menu className="p-5 rounded-2xl" defaultSelectedKeys={["2"]} mode="inline" items={items} />
+		<div id="inboxMenu" className="bg-white pt-5 rounded-lg">
+			<button className="bg-CBlue text-white flex gap-2 items-center justify-center rounded-lg mx-auto  py-2 w-4/5">
+				<FaPlus />
+				Compose
+			</button>
+			<Menu
+				className="p-5 rounded-2xl w-64"
+				defaultSelectedKeys={["1"]}
+				mode="vertical"
+				items={items}
+			/>
 		</div>
 	);
 };

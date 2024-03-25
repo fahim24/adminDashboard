@@ -1,10 +1,15 @@
-import FavPSlider from "@/modules/Sliders/FavPSlider";
-import { Card, Rate } from "antd";
+// Import from react
 import React from "react";
-import { FaHeart } from "react-icons/fa";
-import { RiHeartLine } from "react-icons/ri";
+// Import from next
 import { Metadata } from "next";
+// Import from antd
+import { Card, Rate } from "antd";
+// Import from react-icons
+import { FaHeart } from "react-icons/fa";
+// Imported modules
+import FavPSlider from "@/modules/Sliders/FavPSlider";
 
+// Title and Metadata for the Favorites Page
 export const metadata: Metadata = {
 	title: "Favorites",
 };
