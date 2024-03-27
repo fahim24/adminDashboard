@@ -19,9 +19,9 @@ export default function InboxStarred() {
 		// Starred Inbox Page Start
 		<div className="space-y-5">
 			{/* Content Start */}
-			<Card>
+			<div className="bg-white border rounded-lg">
 				{/* Search Bar and Filter Buttons Start */}
-				<div className="flex items-center justify-between">
+				<div className="flex items-center justify-between p-5">
 					<Input
 						placeholder="Search mail"
 						className="bg-CBG rounded-full w-80"
@@ -40,11 +40,11 @@ export default function InboxStarred() {
 					</div>
 				</div>
 				{/* Mails Start */}
-				<div className="divide-y mt-10">
+				<div className="divide-y mt-5">
 					{/* Mail 1 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Jullu Jalal</p>
 						</div>
@@ -58,9 +58,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 2 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Minerva Barnett</p>
 						</div>
@@ -72,9 +72,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 3 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Peter Lewis</p>
 						</div>
@@ -86,9 +86,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 4 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Anthony Briggs</p>
 						</div>
@@ -102,9 +102,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 5 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Clifford Morgan</p>
 						</div>
@@ -118,9 +118,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 6 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Cecilia Webster</p>
 						</div>
@@ -132,9 +132,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 7 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Harvey Manning</p>
 						</div>
@@ -148,9 +148,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 8 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Willie Blake</p>
 						</div>
@@ -164,9 +164,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 9 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Minerva Barnett</p>
 						</div>
@@ -178,9 +178,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 10 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Fanny Weaver</p>
 						</div>
@@ -194,9 +194,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 11 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Olga Hogan</p>
 						</div>
@@ -210,9 +210,9 @@ export default function InboxStarred() {
 						</div>
 					</div>
 					{/* Mail 12 */}
-					<div className="py-4 flex gap-2.5 items-center">
+					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
 						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" />
+							<input type="checkbox" className="accent-black" />
 							<Rate count={1} defaultValue={1} />
 							<p className="font-bold">Lora Houston</p>
 						</div>
@@ -224,7 +224,7 @@ export default function InboxStarred() {
 						</div>
 					</div>
 				</div>
-			</Card>
+			</div>
 			{/* Pagination Start */}
 			<div className="flex items-center justify-between">
 				<p className="font-semibold text-CLight">Showing 1-12 of 245</p>

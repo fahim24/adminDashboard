@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Menu, MenuProps } from "antd";
 import { RiDashboard3Line, RiHeartLine, RiLayoutGridLine, RiSettings3Line } from "react-icons/ri";
 import { PiChats, PiGridNine, PiListChecks, PiMoneyBold, PiPower } from "react-icons/pi";
@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useMenuToggleContext } from "@/modules/Contexts/MenuToggleContext";
+import { usePathname } from "next/navigation";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -35,40 +36,89 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-	getItem(<Link href="/dashboard">Dashboard</Link>, "1", <RiDashboard3Line />),
-	getItem(<Link href="/dashboard/products">Products</Link>, "2", <RiLayoutGridLine />),
-	getItem(<Link href="/dashboard/favorites">Favorites</Link>, "3", <RiHeartLine />),
-	getItem(<Link href="/dashboard/inbox">Inbox</Link>, "4", <PiChats />),
-	getItem(<Link href="/dashboard/order-lists">Order List</Link>, "5", <PiListChecks />),
-	getItem(<Link href="/dashboard/product-stocks">Product Stock</Link>, "6", <MdOutlineTableRows />),
+	getItem(<Link href="/dashboard">Dashboard</Link>, "/dashboard", <RiDashboard3Line />),
+	getItem(
+		<Link href="/dashboard/products">Products</Link>,
+		"/dashboard/products",
+		<RiLayoutGridLine />
+	),
+	getItem(
+		<Link href="/dashboard/favorites">Favorites</Link>,
+		"/dashboard/favorites",
+		<RiHeartLine />
+	),
+	getItem(<Link href="/dashboard/inbox">Inbox</Link>, "/dashboard/inbox", <PiChats />),
+	getItem(
+		<Link href="/dashboard/order-lists">Order List</Link>,
+		"/dashboard/order-lists",
+		<PiListChecks />
+	),
+	getItem(
+		<Link href="/dashboard/product-stocks">Product Stock</Link>,
+		"/dashboard/product-stocks",
+		<MdOutlineTableRows />
+	),
 	{ type: "divider" },
 	getItem(
 		"PAGES",
 		"grp",
 		null,
 		[
-			getItem(<Link href="/dashboard/pricing">Pricing</Link>, "7", <LiaGiftSolid />),
-			getItem(<Link href="/dashboard/calendar">Calendar</Link>, "8", <LiaCalendarSolid />),
-			getItem(<Link href="/dashboard/to-do">To-Do</Link>, "9", <LiaClipboard />),
-			getItem(<Link href="/dashboard/contacts">Contact</Link>, "10", <LiaUserFriendsSolid />),
-			getItem(<Link href="/dashboard/invoices">Invoice</Link>, "11", <PiMoneyBold />),
-			getItem(<Link href="/dashboard/ui-elements">UI Elements</Link>, "12", <LiaChartBarSolid />),
-			getItem(<Link href="/dashboard/team">Team</Link>, "13", <LiaUser />),
-			getItem(<Link href="/dashboard/tables">Table</Link>, "14", <PiGridNine />),
+			getItem(
+				<Link href="/dashboard/pricing">Pricing</Link>,
+				"/dashboard/pricing",
+				<LiaGiftSolid />
+			),
+			getItem(
+				<Link href="/dashboard/calendar">Calendar</Link>,
+				"/dashboard/calendar",
+				<LiaCalendarSolid />
+			),
+			getItem(<Link href="/dashboard/to-do">To-Do</Link>, "/dashboard/to-do", <LiaClipboard />),
+			getItem(
+				<Link href="/dashboard/contacts">Contact</Link>,
+				"/dashboard/contacts",
+				<LiaUserFriendsSolid />
+			),
+			getItem(
+				<Link href="/dashboard/invoices">Invoice</Link>,
+				"/dashboard/invoices",
+				<PiMoneyBold />
+			),
+			getItem(
+				<Link href="/dashboard/ui-elements">UI Elements</Link>,
+				"/dashboard/ui-elements",
+				<LiaChartBarSolid />
+			),
+			getItem(<Link href="/dashboard/team">Team</Link>, "/dashboard/team", <LiaUser />),
+			getItem(<Link href="/dashboard/tables">Table</Link>, "/dashboard/tables", <PiGridNine />),
 		],
 		"group"
 	),
 	{ type: "divider" },
-	getItem(<Link href="/dashboard/settings">Settings</Link>, "15", <RiSettings3Line />),
-	getItem(<Link href="/logout">Logout</Link>, "16", <PiPower />),
+	getItem(
+		<Link href="/dashboard/settings">Settings</Link>,
+		"/dashboard/settings",
+		<RiSettings3Line />
+	),
+	getItem(<Link href="/logout">Logout</Link>, "/logout", <PiPower />),
 ];
 
 const Sidenav: React.FC = () => {
 	const { collapsed } = useMenuToggleContext();
+	const pathName = usePathname();
+	const [currentPath, setCurrentPath] = useState<string>(pathName);
+	useEffect(() => {
+		// console.log(pathName);
+		if (pathName.startsWith("/dashboard/inbox/")) {
+			setCurrentPath("/dashboard/inbox");
+		} else setCurrentPath(pathName);
+	}, [pathName]);
+
 	return (
-		<div id="sideMenu" className="bg-white sticky top-0 h-screen overflow-y-auto ">
+		<div id="sideMenu" className="bg-white sticky top-0 h-screen  ">
 			<Link href="/">
-				<div className="px-5 py-3 sticky top-0 bg-white z-50">
+				<div className="px-5 py-2.5 sticky top-0 bg-white z-50 h-[60px] flex justify-center items-center">
 					{collapsed ? (
 						<div className="w-10">
 							<Image src="/image/logo.png" width={600} height={125} alt="Logo" />
@@ -81,8 +131,8 @@ const Sidenav: React.FC = () => {
 				</div>
 			</Link>
 			<Menu
-				className="p-5"
-				defaultSelectedKeys={["1"]}
+				className="p-5 overflow-y-auto h-[calc(100%-60px)]"
+				selectedKeys={[currentPath]}
 				mode="inline"
 				inlineCollapsed={collapsed}
 				items={items}
