@@ -66,9 +66,9 @@ const items: MenuItem[] = [
 const Sidenav: React.FC = () => {
 	const { collapsed } = useMenuToggleContext();
 	return (
-		<div id="sideMenu" className="bg-white overflow-y-scroll sticky top-0 h-screen">
+		<div id="sideMenu" className="bg-white sticky top-0 h-screen overflow-y-auto ">
 			<Link href="/">
-				<div className="p-5">
+				<div className="px-5 py-3 sticky top-0 bg-white z-50">
 					{collapsed ? (
 						<div className="w-10">
 							<Image src="/image/logo.png" width={600} height={125} alt="Logo" />
@@ -81,7 +81,7 @@ const Sidenav: React.FC = () => {
 				</div>
 			</Link>
 			<Menu
-				className="px-5"
+				className="p-5"
 				defaultSelectedKeys={["1"]}
 				mode="inline"
 				inlineCollapsed={collapsed}
