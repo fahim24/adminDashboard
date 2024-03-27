@@ -8,6 +8,7 @@ import { Card, Input, Rate } from "antd";
 import { CiSearch } from "react-icons/ci";
 import { MdDelete, MdInfo, MdMoveToInbox } from "react-icons/md";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Link from "next/link";
 
 // Title and Metadata for the Inbox Page
 export const metadata: Metadata = {

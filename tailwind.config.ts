@@ -18,7 +18,7 @@ const config: Config = {
 				COrange: "#FF8743",
 				CGray: "#B5B5B5",
 				CPink: "#F97FD9",
-				CPurple: "#9E8FFF",
+				CPurple: "#D456FD",
 			},
 		},
 	},
