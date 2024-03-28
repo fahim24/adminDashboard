@@ -3,6 +3,11 @@ import { Metadata } from "next";
 import { ImFilter } from "react-icons/im";
 import { FaAngleDown, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { FaArrowRotateLeft } from "react-icons/fa6";
+import DatePickerButton from "@/modules/buttons/DatePicker";
+import OrderTypePicker from "@/modules/buttons/OrderTypePicker";
+import OrderStatusPicker from "@/modules/buttons/OrderStatusPicker";
+import Link from "next/link";
+import ResetFilter from "@/modules/buttons/ResetFilter";
 
 export const metadata: Metadata = {
 	title: "Order Lists",
@@ -16,22 +21,15 @@ export default function OrderList() {
 			<h1 className="text-3xl text-CDark font-bold">Order Lists</h1>
 			{/* Filter Bar Start */}
 			<div className="bg-white flex border rounded-xl w-fit divide-x text-sm font-semibold">
-				<div className="p-2.5 hover:bg-CBG">
+				<div className="p-2.5 hover:bg-CBG flex items-center justify-center">
 					<ImFilter />
 				</div>
-				<div className="p-2.5 hover:bg-CBG">Filter By</div>
-				<div className="p-2.5 hover:bg-CBG flex items-center gap-2.5">
-					Date <FaAngleDown />
-				</div>
-				<div className="p-2.5 hover:bg-CBG flex items-center gap-2.5">
-					Order Type <FaAngleDown />
-				</div>
-				<div className="p-2.5 hover:bg-CBG flex items-center gap-2.5">
-					Order Status <FaAngleDown />
-				</div>
-				<div className="p-2.5 hover:bg-CBG flex items-center gap-2.5 text-CRed">
-					<FaArrowRotateLeft /> Reset Filter
-				</div>
+				<div className="p-2.5 hover:bg-CBG flex items-center justify-center">Filter By</div>
+
+				<DatePickerButton />
+				<OrderTypePicker />
+				<OrderStatusPicker />
+				<ResetFilter />
 			</div>
 			{/* Order List Start */}
 			<div className="bg-white border rounded-2xl">

@@ -32,9 +32,65 @@
 	box-shadow: none;
 }
 
+.date-filter .ant-picker .ant-picker-input > input::placeholder {
+	color: black;
+}
+
 .bg-img {
 	background-image: url("/image/pageBG.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+.type-picker input[type="checkbox"]:checked + label {
+	background-color: #4880ff;
+	color: white;
+}
+.type-picker label {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #4880ff;
+	text-align: center;
+	background-color: white;
+	line-height: 32px;
+	border-radius: 32px;
+	border: 1px solid #4880ff;
+	font-weight: 600;
+}
+.type-picker label:hover,
+input[type="checkbox"]:checked + label:hover {
+	cursor: pointer;
+	background-color: #4880ff;
+	color: white;
+}
+
+.status-picker input[type="checkbox"]:checked + label {
+	background-color: #4880ff;
+	color: white;
+}
+.status-picker label {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #4880ff;
+	text-align: center;
+	background-color: white;
+	line-height: 32px;
+	border-radius: 32px;
+	border: 1px solid #4880ff;
+	font-weight: 600;
+}
+.status-picker label:hover,
+input[type="checkbox"]:checked + label:hover {
+	cursor: pointer;
+	background-color: #4880ff;
+	color: white;
 }

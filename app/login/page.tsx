@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
 import SignInButton from "@/modules/buttons/SignInButton";
+import { Alert } from "antd";
 
 export const metadata: Metadata = {
 	title: "Login",
@@ -9,7 +10,15 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
 	return (
-		<div className="h-screen w-screen flex justify-center items-center bg-img">
+		<div className="relative h-screen w-screen flex justify-center items-center bg-img">
+			<Alert
+				description="Click Sign In to continue, No need for Email and Password"
+				message="Information about Sign in"
+				type="info"
+				showIcon
+				closable
+				className="absolute top-10  right-10 "
+			/>
 			<div className="bg-white p-10 rounded-xl">
 				<p className="text-3xl font-bold text-center mb-2">Login to Account</p>
 				<p className="text-center text-lg font-semibold text-CLight mb-5 px-10">
