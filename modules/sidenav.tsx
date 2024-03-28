@@ -64,43 +64,19 @@ const items: MenuItem[] = [
 		"grp",
 		null,
 		[
-			getItem(
-				<Link href="/dashboard/pricing">Pricing</Link>,
-				"/dashboard/pricing",
-				<LiaGiftSolid />
-			),
-			getItem(
-				<Link href="/dashboard/calendar">Calendar</Link>,
-				"/dashboard/calendar",
-				<LiaCalendarSolid />
-			),
-			getItem(<Link href="/dashboard/to-do">To-Do</Link>, "/dashboard/to-do", <LiaClipboard />),
-			getItem(
-				<Link href="/dashboard/contacts">Contact</Link>,
-				"/dashboard/contacts",
-				<LiaUserFriendsSolid />
-			),
-			getItem(
-				<Link href="/dashboard/invoices">Invoice</Link>,
-				"/dashboard/invoices",
-				<PiMoneyBold />
-			),
-			getItem(
-				<Link href="/dashboard/ui-elements">UI Elements</Link>,
-				"/dashboard/ui-elements",
-				<LiaChartBarSolid />
-			),
-			getItem(<Link href="/dashboard/team">Team</Link>, "/dashboard/team", <LiaUser />),
-			getItem(<Link href="/dashboard/tables">Table</Link>, "/dashboard/tables", <PiGridNine />),
+			getItem(<Link href="/pricing">Pricing</Link>, "/pricing", <LiaGiftSolid />),
+			getItem(<Link href="/calendar">Calendar</Link>, "/calendar", <LiaCalendarSolid />),
+			getItem(<Link href="/to-do">To-Do</Link>, "/to-do", <LiaClipboard />),
+			getItem(<Link href="/contacts">Contact</Link>, "/contacts", <LiaUserFriendsSolid />),
+			getItem(<Link href="/invoices">Invoice</Link>, "/invoices", <PiMoneyBold />),
+			getItem(<Link href="/ui-elements">UI Elements</Link>, "/ui-elements", <LiaChartBarSolid />),
+			getItem(<Link href="/team">Team</Link>, "/team", <LiaUser />),
+			getItem(<Link href="/tables">Table</Link>, "/tables", <PiGridNine />),
 		],
 		"group"
 	),
 	{ type: "divider" },
-	getItem(
-		<Link href="/dashboard/settings">Settings</Link>,
-		"/dashboard/settings",
-		<RiSettings3Line />
-	),
+	getItem(<Link href="/settings">Settings</Link>, "/settings", <RiSettings3Line />),
 	getItem(<Link href="/logout">Logout</Link>, "/logout", <PiPower />),
 ];
 

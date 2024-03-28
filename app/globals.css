@@ -94,3 +94,10 @@ input[type="checkbox"]:checked + label:hover {
 	background-color: #4880ff;
 	color: white;
 }
+
+.cardBG {
+	background-image: url("/image/cardPattern.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
