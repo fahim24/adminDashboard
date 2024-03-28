@@ -4,7 +4,7 @@ import React from "react";
 import { Metadata } from "next";
 import { Card, Divider } from "antd";
 
-// Title and Metadata for the Favorites Page
+// Title and Metadata for the Pricing Page
 export const metadata: Metadata = {
 	title: "Pricing",
 };
