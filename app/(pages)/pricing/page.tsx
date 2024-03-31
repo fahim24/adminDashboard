@@ -18,7 +18,6 @@ export default function PricingPage() {
 			{/* Page Content Start */}
 			<div className="grid grid-cols-3 gap-5">
 				<Card className="text-center cardBG">
-					{/* <div className="cardBG absolute top-0 left-0 right-0 bottom-0 "></div> */}
 					<div className="space-y-2">
 						<p className="text-xl font-bold">Basic</p>
 						<p className="text-CGray ">Monthly Charge</p>
@@ -45,7 +44,6 @@ export default function PricingPage() {
 					</div>
 				</Card>
 				<Card className="text-center cardBG">
-					{/* <div className="cardBG absolute top-0 left-0 right-0 bottom-0 "></div> */}
 					<div className="space-y-2">
 						<p className="text-xl font-bold">Standard</p>
 						<p className="text-CGray ">Monthly Charge</p>
@@ -72,7 +70,6 @@ export default function PricingPage() {
 					</div>
 				</Card>
 				<Card className="text-center cardBG">
-					{/* <div className="cardBG absolute top-0 left-0 right-0 bottom-0 "></div> */}
 					<div className="space-y-2">
 						<p className="text-xl font-bold">Premium</p>
 						<p className="text-CGray ">Monthly Charge</p>
