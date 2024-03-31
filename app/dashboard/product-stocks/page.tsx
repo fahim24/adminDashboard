@@ -1,17 +1,81 @@
 import React from "react";
 // Import from next
 import { Metadata } from "next";
-import Image from "next/image";
 import { Input } from "antd";
 import { CiSearch } from "react-icons/ci";
-import { FaAngleLeft, FaAngleRight, FaRegEdit } from "react-icons/fa";
-import { RiDeleteBinLine } from "react-icons/ri";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import ProductStockItem from "@/modules/components/ProductStockItem";
 
 export const metadata: Metadata = {
 	title: "Product Stocks",
 };
 
 export default function ProductStock() {
+	const productStocks = [
+		{
+			key: "prod1",
+			img: "/image/stock1.png",
+			name: "Apple Watch Series 4",
+			category: "Digital Product",
+			price: "$690.00",
+			piece: 63,
+			colors: ["black", "CGray", "CPink"],
+		},
+		{
+			key: "prod2",
+			img: "/image/stock2.png",
+			name: "Microsoft Headsquare",
+			category: "Digital Product",
+			price: "$190.00",
+			piece: 13,
+			colors: ["black", "CPink", "CBlue", "COrange"],
+		},
+		{
+			key: "prod3",
+			img: "/image/stock3.png",
+			name: "Women’s Dress",
+			category: "Fashion",
+			price: "$640.00",
+			piece: 635,
+			colors: ["fuchsia-800", "sky-300", "indigo-900", "blue-700"],
+		},
+		{
+			key: "prod4",
+			img: "/image/stock4.png",
+			name: "Samsung A50",
+			category: "Mobile",
+			price: "$400.00",
+			piece: 67,
+			colors: ["blue-700", "black", "fuchsia-800"],
+		},
+		{
+			key: "prod5",
+			img: "/image/stock5.png",
+			name: "Camera",
+			category: "Electronic",
+			price: "$420.00",
+			piece: 52,
+			colors: ["blue-700", "black", "fuchsia-800"],
+		},
+		{
+			key: "prod6",
+			img: "/image/stock2.png",
+			name: "Microsoft Headsquare",
+			category: "Digital Product",
+			price: "$190.00",
+			piece: 13,
+			colors: ["black", "CPink", "CBlue", "COrange"],
+		},
+		{
+			key: "prod7",
+			img: "/image/stock3.png",
+			name: "Women’s Dress",
+			category: "Fashion",
+			price: "$640.00",
+			piece: 635,
+			colors: ["fuchsia-800", "sky-300", "indigo-900", "blue-700"],
+		},
+	];
 	return (
 		// product Stock Page Start
 		<div className="space-y-5">
@@ -39,199 +103,10 @@ export default function ProductStock() {
 						</tr>
 					</thead>
 					<tbody className="divide-y text-sm">
-						{/* Product Stock Item 1 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock1.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Apple Watch Series 4</td>
-							<td>Digital Product</td>
-							<td>$690.00</td>
-							<td>63</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-black"></span>
-									<span className="size-5 rounded-full shrink-0 bg-CGray"></span>
-									<span className="size-5 rounded-full shrink-0 bg-CPink"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
-						{/* Product Stock Item 2 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock2.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Microsoft Headsquare</td>
-							<td>Digital Product</td>
-							<td>$190.00</td>
-							<td>13</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-black"></span>
-									<span className="size-5 rounded-full shrink-0 bg-CPink"></span>
-									<span className="size-5 rounded-full shrink-0 bg-CBlue"></span>
-									<span className="size-5 rounded-full shrink-0 bg-COrange"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
-						{/* Product Stock Item 3 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock3.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Women’s Dress</td>
-							<td>Fashion</td>
-							<td>$640.00</td>
-							<td>635</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-fuchsia-800"></span>
-									<span className="size-5 rounded-full shrink-0 bg-sky-300"></span>
-									<span className="size-5 rounded-full shrink-0 bg-indigo-900"></span>
-									<span className="size-5 rounded-full shrink-0 bg-blue-700"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
-						{/* Product Stock Item 4 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock4.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Samsung A50</td>
-							<td>Mobile</td>
-							<td>$400.00</td>
-							<td>67</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-blue-700"></span>
-									<span className="size-5 rounded-full shrink-0 bg-black"></span>
-									<span className="size-5 rounded-full shrink-0 bg-fuchsia-800"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
-						{/* Product Stock Item 5 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock5.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Camera</td>
-							<td>Electronic</td>
-							<td>$420.00</td>
-							<td>52</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-blue-700"></span>
-									<span className="size-5 rounded-full shrink-0 bg-black"></span>
-									<span className="size-5 rounded-full shrink-0 bg-fuchsia-800"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
-						{/* Product Stock Item 6 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock2.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Microsoft Headsquare</td>
-							<td>Digital Product</td>
-							<td>$190.00</td>
-							<td>13</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-black"></span>
-									<span className="size-5 rounded-full shrink-0 bg-CPink"></span>
-									<span className="size-5 rounded-full shrink-0 bg-CBlue"></span>
-									<span className="size-5 rounded-full shrink-0 bg-COrange"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
-						{/* Product Stock Item 7 */}
-						<tr className="font-semibold hover:bg-gray-100 ">
-							<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
-								<Image src="/image/stock3.png" alt="Product icon" width={60} height={60} />
-							</td>
-							<td>Women’s Dress</td>
-							<td>Fashion</td>
-							<td>$640.00</td>
-							<td>635</td>
-							<td>
-								<div className="flex gap-2.5 items-center">
-									<span className="size-5 rounded-full shrink-0 bg-fuchsia-800"></span>
-									<span className="size-5 rounded-full shrink-0 bg-sky-300"></span>
-									<span className="size-5 rounded-full shrink-0 bg-indigo-900"></span>
-									<span className="size-5 rounded-full shrink-0 bg-blue-700"></span>
-								</div>
-							</td>
-							<td>
-								<div className="bg-white rounded-lg divide-x border w-fit">
-									<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
-										<FaRegEdit />
-									</button>
-									<button className="py-2 px-3 hover:bg-CLight hover:bg-opacity-5 text-CRed">
-										<RiDeleteBinLine />
-									</button>
-								</div>
-							</td>
-						</tr>
+						{productStocks.map((product) => (
+							// eslint-disable-next-line react/jsx-key
+							<ProductStockItem {...product} />
+						))}
 					</tbody>
 				</table>
 			</div>

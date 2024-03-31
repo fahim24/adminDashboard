@@ -8,7 +8,7 @@ import { Card, Input, Rate } from "antd";
 import { CiSearch } from "react-icons/ci";
 import { MdDelete, MdInfo, MdMoveToInbox } from "react-icons/md";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import Link from "next/link";
+import StarredMail from "@/modules/components/StarredMail";
 
 // Title and Metadata for the Inbox Page
 export const metadata: Metadata = {
@@ -16,6 +16,80 @@ export const metadata: Metadata = {
 };
 
 export default function InboxStarred() {
+	const starredMails = [
+		{
+			key: "mail1",
+			name: "Jullu Jalal",
+			description: "Our Bachelor of Commerce program is ACBSP-accredited.",
+			time: "8:38 AM",
+		},
+		{
+			key: "mail2",
+			name: "Minerva Barnett",
+			description: "Get Best Advertiser In Your Side Pocket",
+			time: "8:13 AM",
+		},
+		{
+			key: "mail3",
+			name: "Peter Lewis",
+			description: "Vacation Home Rental Success",
+			time: "7:52 PM",
+		},
+		{
+			key: "mail4",
+			name: "Anthony Briggs",
+			description: "Free Classifieds Using Them To Promote Your Stuff Online",
+			time: "7:52 PM",
+		},
+		{
+			key: "mail5",
+			name: "Clifford Morgan",
+			description: "Enhance Your Brand Potential With Giant Advertising Blimps",
+			time: "4:13 PM",
+		},
+		{
+			key: "mail6",
+			name: "Cecilia Webster",
+			description: "Always Look On The Bright Side Of Life",
+			time: "3:52 PM",
+		},
+		{
+			key: "mail7",
+			name: "Harvey Manning",
+			description: "Curling Irons Are As Individual As The Women Who Use Them",
+			time: "2:30 PM",
+		},
+		{
+			key: "mail8",
+			name: "Willie Blake",
+			description: "Our Bachelor of Commerce program is ACBSP-accredited.",
+			time: "8:38 AM",
+		},
+		{
+			key: "mail9",
+			name: "Minerva Barnett",
+			description: "Get Best Advertiser In Your Side Pocket",
+			time: "8:13 AM",
+		},
+		{
+			key: "mail10",
+			name: "Fanny Weaver",
+			description: "Free Classifieds Using Them To Promote Your Stuff Online",
+			time: "7:52 PM",
+		},
+		{
+			key: "mail11",
+			name: "Olga Hogan",
+			description: "Enhance Your Brand Potential With Giant Advertising Blimps",
+			time: "4:13 PM",
+		},
+		{
+			key: "mail12",
+			name: "Lora Houston",
+			description: "Vacation Home Rental Success",
+			time: "7:52 PM",
+		},
+	];
 	return (
 		// Starred Inbox Page Start
 		<div className="space-y-5">
@@ -42,188 +116,10 @@ export default function InboxStarred() {
 				</div>
 				{/* Mails Start */}
 				<div className="divide-y mt-5">
-					{/* Mail 1 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Jullu Jalal</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Our Bachelor of Commerce program is ACBSP-accredited.
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">8:38 AM</p>
-						</div>
-					</div>
-					{/* Mail 2 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Minerva Barnett</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">Get Best Advertiser In Your Side Pocket</p>
-							</div>
-							<p className="font-semibold text-CLight">8:13 AM</p>
-						</div>
-					</div>
-					{/* Mail 3 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Peter Lewis</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">Vacation Home Rental Success</p>
-							</div>
-							<p className="font-semibold text-CLight">7:52 PM</p>
-						</div>
-					</div>
-					{/* Mail 4 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Anthony Briggs</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Free Classifieds Using Them To Promote Your Stuff Online
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">7:52 PM</p>
-						</div>
-					</div>
-					{/* Mail 5 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Clifford Morgan</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Enhance Your Brand Potential With Giant Advertising Blimps
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">4:13 PM</p>
-						</div>
-					</div>
-					{/* Mail 6 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Cecilia Webster</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">Always Look On The Bright Side Of Life</p>
-							</div>
-							<p className="font-semibold text-CLight">3:52 PM</p>
-						</div>
-					</div>
-					{/* Mail 7 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Harvey Manning</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Curling Irons Are As Individual As The Women Who Use Them
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">2:30 PM</p>
-						</div>
-					</div>
-					{/* Mail 8 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Willie Blake</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Our Bachelor of Commerce program is ACBSP-accredited.
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">8:38 AM</p>
-						</div>
-					</div>
-					{/* Mail 9 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Minerva Barnett</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">Get Best Advertiser In Your Side Pocket</p>
-							</div>
-							<p className="font-semibold text-CLight">8:13 AM</p>
-						</div>
-					</div>
-					{/* Mail 10 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Fanny Weaver</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Free Classifieds Using Them To Promote Your Stuff Online
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">7:52 PM</p>
-						</div>
-					</div>
-					{/* Mail 11 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Olga Hogan</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">
-									Enhance Your Brand Potential With Giant Advertising Blimps
-								</p>
-							</div>
-							<p className="font-semibold text-CLight">4:13 PM</p>
-						</div>
-					</div>
-					{/* Mail 12 */}
-					<div className="p-4 has-[:checked]:bg-CBG text-sm flex gap-2.5 items-center">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<p className="font-bold">Lora Houston</p>
-						</div>
-						<div className="flex items-center justify-between gap-2.5 w-3/4">
-							<div className="flex gap-2.5 items-center">
-								<p className="font-semibold">Vacation Home Rental Success</p>
-							</div>
-							<p className="font-semibold text-CLight">7:52 PM</p>
-						</div>
-					</div>
+					{starredMails.map((mail) => (
+						// eslint-disable-next-line react/jsx-key
+						<StarredMail {...mail} />
+					))}
 				</div>
 			</div>
 			{/* Pagination Start */}

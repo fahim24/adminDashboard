@@ -1,6 +1,7 @@
 // import from react
 import React from "react";
 // import from next
+import Link from "next/link";
 import { Metadata } from "next";
 // import from antd
 import { Input, Rate } from "antd";
@@ -8,7 +9,13 @@ import { Input, Rate } from "antd";
 import { CiSearch } from "react-icons/ci";
 import { MdDelete, MdInfo, MdMoveToInbox } from "react-icons/md";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import Link from "next/link";
+//  import from components
+import InboxMail, {
+	FriendsLabel,
+	PrimaryLabel,
+	SocialLabel,
+	WorkLabel,
+} from "@/modules/components/InboxMail";
 
 // Title and Metadata for the Inbox Page
 export const metadata: Metadata = {
@@ -16,6 +23,101 @@ export const metadata: Metadata = {
 };
 
 export default function Inbox() {
+	const inboxMails = [
+		{
+			key: "mail1",
+			rate: 0,
+			name: "Jullu Jalal",
+			description: "Our Bachelor of Commerce program is ACBSP-accredited.",
+			label: <PrimaryLabel />,
+			time: "8:38 AM",
+		},
+		{
+			key: "mail2",
+			rate: 0,
+			name: "Minerva Barnett",
+			description: "Get Best Advertiser In Your Side Pocket",
+			label: <WorkLabel />,
+			time: "8:13 AM",
+		},
+		{
+			key: "mail3",
+			rate: 0,
+			name: "Peter Lewis",
+			description: "Vacation Home Rental Success",
+			label: <FriendsLabel />,
+			time: "7:52 PM",
+		},
+		{
+			key: "mail4",
+			rate: 1,
+			name: "Anthony Briggs",
+			description: "Free Classifieds Using Them To Promote Your Stuff Online",
+			time: "7:52 PM",
+		},
+		{
+			key: "mail5",
+			rate: 0,
+			name: "Clifford Morgan",
+			description: "Enhance Your Brand Potential With Giant Advertising Blimps",
+			label: <SocialLabel />,
+			time: "4:13 PM",
+		},
+		{
+			key: "mail6",
+			rate: 0,
+			name: "Cecilia Webster",
+			description: "Always Look On The Bright Side Of Life",
+			label: <FriendsLabel />,
+			time: "3:52 PM",
+		},
+		{
+			key: "mail7",
+			rate: 1,
+			name: "Harvey Manning",
+			description: "Curling Irons Are As Individual As The Women Who Use Them",
+			time: "2:30 PM",
+		},
+		{
+			key: "mail8",
+			rate: 0,
+			name: "Willie Blake",
+			description: "Our Bachelor of Commerce program is ACBSP-accredited.",
+			label: <PrimaryLabel />,
+			time: "8:38 AM",
+		},
+		{
+			key: "mail9",
+			rate: 0,
+			name: "Minerva Barnett",
+			description: "Get Best Advertiser In Your Side Pocket",
+			label: <WorkLabel />,
+			time: "8:13 AM",
+		},
+		{
+			key: "mail10",
+			rate: 1,
+			name: "Fanny Weaver",
+			description: "Free Classifieds Using Them To Promote Your Stuff Online",
+			time: "7:52 PM",
+		},
+		{
+			key: "mail11",
+			rate: 0,
+			name: "Olga Hogan",
+			description: "Enhance Your Brand Potential With Giant Advertising Blimps",
+			label: <SocialLabel />,
+			time: "4:13 PM",
+		},
+		{
+			key: "mail12",
+			rate: 0,
+			name: "Lora Houston",
+			description: "Vacation Home Rental Success",
+			label: <FriendsLabel />,
+			time: "7:52 PM",
+		},
+	];
 	return (
 		// Inbox Page Start
 		<div className="space-y-5">
@@ -42,263 +144,10 @@ export default function Inbox() {
 				</div>
 				{/* Mails Start */}
 				<div className="divide-y mt-5">
-					{/* Mail 1 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Jullu Jalal</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CGreen bg-opacity-20 text-CGreen rounded font-semibold text-xs">
-										Primary
-									</div>
-									<p className="font-semibold">
-										Our Bachelor of Commerce program is ACBSP-accredited.
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">8:38 AM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 2 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black pointer-events-auto" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Minerva Barnett</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-COrange bg-opacity-20 text-COrange rounded font-semibold text-xs">
-										Work
-									</div>
-									<p className="font-semibold">Get Best Advertiser In Your Side Pocket</p>
-								</div>
-								<p className="font-semibold text-CLight">8:13 AM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 3 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Peter Lewis</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CPurple bg-opacity-20 text-CPurple rounded font-semibold text-xs">
-										Friends
-									</div>
-									<p className="font-semibold">Vacation Home Rental Success</p>
-								</div>
-								<p className="font-semibold text-CLight">7:52 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 4 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Anthony Briggs</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<p className="font-semibold">
-										Free Classifieds Using Them To Promote Your Stuff Online
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">7:52 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 5 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Clifford Morgan</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CBlue bg-opacity-20 text-CBlue rounded font-semibold text-xs">
-										Social
-									</div>
-									<p className="font-semibold">
-										Enhance Your Brand Potential With Giant Advertising Blimps
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">4:13 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 6 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Cecilia Webster</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CPurple bg-opacity-20 text-CPurple rounded font-semibold text-xs">
-										Friends
-									</div>
-									<p className="font-semibold">Always Look On The Bright Side Of Life</p>
-								</div>
-								<p className="font-semibold text-CLight">3:52 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 7 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Harvey Manning</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<p className="font-semibold">
-										Curling Irons Are As Individual As The Women Who Use Them
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">2:30 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 8 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Willie Blake</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CGreen bg-opacity-20 text-CGreen rounded font-semibold text-xs">
-										Primary
-									</div>
-									<p className="font-semibold">
-										Our Bachelor of Commerce program is ACBSP-accredited.
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">8:38 AM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 9 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Minerva Barnett</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-COrange bg-opacity-20 text-COrange rounded font-semibold text-xs">
-										Work
-									</div>
-									<p className="font-semibold">Get Best Advertiser In Your Side Pocket</p>
-								</div>
-								<p className="font-semibold text-CLight">8:13 AM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 10 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} defaultValue={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Fanny Weaver</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<p className="font-semibold">
-										Free Classifieds Using Them To Promote Your Stuff Online
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">7:52 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 11 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Olga Hogan</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CBlue bg-opacity-20 text-CBlue rounded font-semibold text-xs">
-										Social
-									</div>
-									<p className="font-semibold">
-										Enhance Your Brand Potential With Giant Advertising Blimps
-									</p>
-								</div>
-								<p className="font-semibold text-CLight">4:13 PM</p>
-							</div>
-						</Link>
-					</div>
-					{/* Mail 12 */}
-					<div className="p-4 flex gap-2.5 items-center has-[:checked]:bg-CBG text-sm">
-						<div className="flex gap-2.5 items-center w-1/4">
-							<input type="checkbox" className="checked:accent-black" />
-							<Rate count={1} />
-							<Link href="/dashboard/inbox/message" className="w-full">
-								<p className="font-bold">Lora Houston</p>
-							</Link>
-						</div>
-						<Link href="/dashboard/inbox/message" className="w-3/4">
-							<div className="flex items-center justify-between gap-2.5 w-full">
-								<div className="flex gap-2.5 items-center">
-									<div className="w-16 h-6 flex justify-center items-center  bg-CPurple bg-opacity-20 text-CPurple rounded font-semibold text-xs">
-										Friends
-									</div>
-									<p className="font-semibold">Vacation Home Rental Success</p>
-								</div>
-								<p className="font-semibold text-CLight">7:52 PM</p>
-							</div>
-						</Link>
-					</div>
+					{inboxMails.map((mail) => (
+						// eslint-disable-next-line react/jsx-key
+						<InboxMail {...mail} />
+					))}
 				</div>
 			</div>
 			{/* Pagination Start */}
