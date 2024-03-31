@@ -3,6 +3,7 @@ import React from "react";
 // Import from next
 import { Metadata } from "next";
 import ContactCard from "@/modules/components/ContactCard";
+import Link from "next/link";
 
 // Title and Metadata for the Contacts Page
 export const metadata: Metadata = {
@@ -54,7 +55,11 @@ export default function ContactsPage() {
 			{/* Page Heading Start */}
 			<div className="flex justify-between items-center mb-10">
 				<p className="text-3xl text-CDark font-bold">Contact</p>
-				<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">Add New Contact</button>
+				<Link href="/contacts/new-contact">
+					<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">
+						Add New Contact
+					</button>
+				</Link>
 			</div>
 			{/* Page Content Start */}
 			<div className="grid grid-cols-3 gap-5">
