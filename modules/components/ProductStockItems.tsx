@@ -40,7 +40,7 @@ export default function ProductStockItems() {
 			category: "Fashion",
 			price: "$640.00",
 			piece: 635,
-			colors: ["fuchsia-800", "sky-300", "indigo-900", "blue-700"],
+			colors: ["[#86198F]", "[#7DD3FC]", "[#312E81]", "[#1D4ED8]"],
 		},
 		{
 			key: "prod4",
@@ -49,7 +49,7 @@ export default function ProductStockItems() {
 			category: "Mobile",
 			price: "$400.00",
 			piece: 67,
-			colors: ["blue-700", "black", "fuchsia-800"],
+			colors: ["[#1D4ED8]", "black", "[#86198F]"],
 		},
 		{
 			key: "prod5",
@@ -58,7 +58,7 @@ export default function ProductStockItems() {
 			category: "Electronic",
 			price: "$420.00",
 			piece: 52,
-			colors: ["blue-700", "black", "fuchsia-800"],
+			colors: ["[#1D4ED8]", "black", "[#86198F]"],
 		},
 		{
 			key: "prod6",
@@ -76,7 +76,7 @@ export default function ProductStockItems() {
 			category: "Fashion",
 			price: "$640.00",
 			piece: 635,
-			colors: ["fuchsia-800", "sky-300", "indigo-900", "blue-700"],
+			colors: ["[#86198F]", "[#7DD3FC]", "[#312E81]", "[#1D4ED8]"],
 		},
 	];
 	return (
