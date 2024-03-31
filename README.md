@@ -1,6 +1,6 @@
-## Admin Dashboard
+# Admin Dashboard
 
-# Used Tech
+## Used Tech
 
 - HTML
 - CSS

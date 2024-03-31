@@ -22,7 +22,7 @@ export default function ProductStockItems() {
 			category: "Digital Product",
 			price: "$690.00",
 			piece: 63,
-			colors: ["black", "CGray", "CPink"],
+			colors: ["bg-CDark", "bg-CGray", "bg-CPink"],
 		},
 		{
 			key: "prod2",
@@ -31,7 +31,7 @@ export default function ProductStockItems() {
 			category: "Digital Product",
 			price: "$190.00",
 			piece: 13,
-			colors: ["black", "CPink", "CBlue", "COrange"],
+			colors: ["bg-CDark", "bg-CPink", "bg-CBlue", "bg-COrange"],
 		},
 		{
 			key: "prod3",
@@ -40,7 +40,7 @@ export default function ProductStockItems() {
 			category: "Fashion",
 			price: "$640.00",
 			piece: 635,
-			colors: ["[#86198F]", "[#7DD3FC]", "[#312E81]", "[#1D4ED8]"],
+			colors: ["bg-fuchsia-800", "bg-sky-300", "bg-indigo-900", "bg-blue-700"],
 		},
 		{
 			key: "prod4",
@@ -49,7 +49,7 @@ export default function ProductStockItems() {
 			category: "Mobile",
 			price: "$400.00",
 			piece: 67,
-			colors: ["[#1D4ED8]", "black", "[#86198F]"],
+			colors: ["bg-blue-700", "bg-CDark", "bg-fuchsia-800"],
 		},
 		{
 			key: "prod5",
@@ -58,7 +58,7 @@ export default function ProductStockItems() {
 			category: "Electronic",
 			price: "$420.00",
 			piece: 52,
-			colors: ["[#1D4ED8]", "black", "[#86198F]"],
+			colors: ["bg-blue-700", "bg-CDark", "bg-fuchsia-800"],
 		},
 		{
 			key: "prod6",
@@ -67,7 +67,7 @@ export default function ProductStockItems() {
 			category: "Digital Product",
 			price: "$190.00",
 			piece: 13,
-			colors: ["black", "CPink", "CBlue", "COrange"],
+			colors: ["bg-CDark", "bg-CPink", "bg-CBlue", "bg-COrange"],
 		},
 		{
 			key: "prod7",
@@ -76,7 +76,7 @@ export default function ProductStockItems() {
 			category: "Fashion",
 			price: "$640.00",
 			piece: 635,
-			colors: ["[#86198F]", "[#7DD3FC]", "[#312E81]", "[#1D4ED8]"],
+			colors: ["bg-fuchsia-800", "bg-sky-300", "bg-indigo-900", "bg-blue-700"],
 		},
 	];
 	return (
@@ -124,7 +124,7 @@ export function ProductStockItem({
 			<td>
 				<div className="flex gap-2.5 items-center">
 					{colors.map((color) => (
-						<span key={color} className={`size-5 rounded-full shrink-0 bg-${color}`}></span>
+						<span key={color} className={`size-5 rounded-full shrink-0 ${color}`}></span>
 					))}
 				</div>
 			</td>
