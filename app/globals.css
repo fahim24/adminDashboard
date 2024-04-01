@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.btn {
+		@apply flex items-center justify-center px-4 py-2 bg-CBlue text-white rounded-lg font-semibold gap-2.5;
+	}
+	/* .td-class {
+		@apply mx-2 flex items-center gap-1 px-5 py-3 cursor-pointer;
+	} */
+}
+
 #sideMenu .ant-menu-light .ant-menu-item-selected {
 	background-color: #4880ff;
 	color: white;
 }
-
 #sideMenu > ::-webkit-scrollbar {
 	width: 5px;
 }
@@ -107,19 +115,16 @@ input[type="checkbox"]:checked + label:hover {
 	color: gray;
 	border-color: gray;
 }
-
 .fc .fc-today-button {
 	background-color: white;
 	color: gray;
 	border: gray;
 }
-
 .fc .fc-today-button:disabled {
 	background-color: white;
 	color: gray;
 	border: none;
 }
-
 .fc .fc-button-primary:hover {
 	background-color: rgb(72 128 255);
 	color: white;
@@ -130,7 +135,6 @@ input[type="checkbox"]:checked + label:hover {
 	color: white;
 	border-color: rgb(72 128 255);
 }
-
 .fc .fc-button-primary:not(:disabled).fc-button-active {
 	background-color: rgb(72 128 255);
 	border-color: rgb(72 128 255);

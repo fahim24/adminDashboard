@@ -22,7 +22,7 @@ export default function Dashboard() {
 			<h1 className="text-3xl text-CDark font-bold">Dashboard</h1>
 			{/* Page Content Start*/}
 			{/* Stats Start */}
-			<div className="grid grid-cols-4 gap-5 ">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
 				{/* Total User Start */}
 				<Card>
 					<div className="flex justify-between">
@@ -150,55 +150,55 @@ export default function Dashboard() {
 							]}
 						/>
 					</div>
-					<div>
-						<table className="table-auto w-full">
-							<thead className="">
-								<tr className="bg-CBG text-left ">
-									<th className="px-5 py-3 rounded-l-2xl">Product Name</th>
-									<th>Location</th>
-									<th>Date - Time</th>
-									<th>Piece</th>
-									<th>Amount</th>
-									<th className="rounded-r-2xl">Status</th>
+					<div className="overflow-x-auto  rounded-xl">
+						<table className=" w-full text-left text-CDark font-semibold whitespace-nowrap">
+							<thead className="font-bold bg-CBG rounded-xl">
+								<tr>
+									<th className="px-5 py-3 ">Product Name</th>
+									<th className="px-5 py-3">Location</th>
+									<th className="px-5 py-3">Date - Time</th>
+									<th className="px-5 py-3">Piece</th>
+									<th className="px-5 py-3">Amount</th>
+									<th className="px-5 py-3 ">Status</th>
 								</tr>
 							</thead>
 							<tbody className="divide-y">
-								<tr className="font-semibold hover:bg-gray-100 ">
-									<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
+								<tr className=" hover:bg-gray-100 ">
+									<td className="px-5 py-2 flex gap-2 items-center">
 										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
 										Apple Watch
 									</td>
-									<td>6096 Marjolaine Landing</td>
-									<td>12.09.2019 - 12.53 PM</td>
-									<td>423</td>
-									<td>$34,295</td>
-									<td>
+									<td className="px-5 py-2">6096 Marjolaine Landing</td>
+									<td className="px-5 py-2">12.09.2019 - 12.53 PM</td>
+									<td className="px-5 py-2">423</td>
+									<td className="px-5 py-2">$34,295</td>
+									<td className="px-5 py-2">
 										<span className="bg-CGreen text-white rounded-full px-3 py-1 ">Delivered</span>
 									</td>
 								</tr>
-								<tr className="font-semibold hover:bg-gray-100">
-									<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
+								<tr className=" hover:bg-gray-100">
+									<td className="flex items-center gap-2 px-5 py-2 ">
 										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
 										Apple Watch
 									</td>
-									<td>6096 Marjolaine Landing</td>
-									<td>12.09.2019 - 12.53 PM</td>
-									<td>423</td>
-									<td>$34,295</td>
-									<td>
+									<td className="px-5 py-2">6096 Marjolaine Landing</td>
+									<td className="px-5 py-2">12.09.2019 - 12.53 PM</td>
+									<td className="px-5 py-2">423</td>
+									<td className="px-5 py-2">$34,295</td>
+									<td className="px-5 py-2">
 										<span className="bg-CRed text-white rounded-full px-3 py-1 ">On Hold</span>
 									</td>
 								</tr>
-								<tr className="font-semibold hover:bg-gray-100">
-									<td className="flex items-center gap-1 px-5 py-3 cursor-pointer">
+								<tr className=" hover:bg-gray-100">
+									<td className="flex items-center gap-2 px-5 py-2">
 										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
 										Apple Watch
 									</td>
-									<td>6096 Marjolaine Landing</td>
-									<td>12.09.2019 - 12.53 PM</td>
-									<td>423</td>
-									<td>$34,295</td>
-									<td>
+									<td className="px-5 py-2">6096 Marjolaine Landing</td>
+									<td className="px-5 py-2">12.09.2019 - 12.53 PM</td>
+									<td className="px-5 py-2">423</td>
+									<td className="px-5 py-2">$34,295</td>
+									<td className="px-5 py-2">
 										<span className="bg-CBlue text-white rounded-full px-3 py-1 ">Processing</span>
 									</td>
 								</tr>
@@ -238,7 +238,7 @@ export default function Dashboard() {
 				</Card>
 			</div>
 			{/* Other Stats Start */}
-			<div className="grid grid-cols-3 gap-5 ">
+			<div className="grid grid-cols-1 lg:grid-cols-3 gap-5 ">
 				{/* Customers Stats Start */}
 				<Card>
 					<p className="text-2xl font-bold mb-5">Customers</p>

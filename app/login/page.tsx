@@ -19,9 +19,9 @@ export default function LoginPage() {
 				closable
 				className="absolute top-10  right-10 "
 			/>
-			<div className="bg-white p-10 rounded-xl">
+			<div className="bg-white p-10 rounded-xl mx-5">
 				<p className="text-3xl font-bold text-center mb-2">Login to Account</p>
-				<p className="text-center text-lg font-semibold text-CLight mb-5 px-10">
+				<p className="text-center text-lg font-semibold text-CLight mb-5 md:px-10">
 					Please enter your email and password to continue
 				</p>
 				<div className="flex flex-col gap-2 mb-4">
@@ -46,7 +46,7 @@ export default function LoginPage() {
 					<label>Remember Password</label>
 				</div>
 				<SignInButton />
-				<div className="text-CLight flex items-center justify-center gap-2">
+				<div className="text-CLight flex flex-col md:flex-row items-center justify-center gap-2">
 					Don&apos;t have an account?
 					<Link href="/register" className="text-CBlue hover:underline">
 						Create Account

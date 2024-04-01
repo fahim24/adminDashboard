@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 export default function RegisterPage() {
 	return (
 		<div className="h-screen w-screen flex justify-center items-center bg-img">
-			<div className="bg-white p-10 rounded-xl">
+			<div className="bg-white p-10 rounded-xl mx-5">
 				<p className="text-3xl font-bold text-center mb-2">Create an Account</p>
-				<p className="text-center text-lg font-semibold text-CLight mb-5 px-16">
+				<p className="text-center text-lg font-semibold text-CLight mb-5 md:px-16">
 					Create a account to continue
 				</p>
 				<div className="flex flex-col gap-2 mb-4">
@@ -48,7 +48,7 @@ export default function RegisterPage() {
 					</button>
 				</Link>
 
-				<div className="text-CLight flex items-center justify-center gap-2">
+				<div className="text-CLight flex flex-col md:flex-row items-center justify-center gap-2">
 					Already have an account?
 					<Link href="/login" className="text-CBlue hover:underline">
 						Login

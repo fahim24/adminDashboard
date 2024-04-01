@@ -90,7 +90,7 @@ const Topnav: React.FC = () => {
 				<ToggleButton />
 				<Input
 					placeholder="Search"
-					className="bg-CBG rounded-full hidden md:flex w-80"
+					className="bg-CBG rounded-full hidden md:flex w-40 lg:w-80"
 					prefix={<CiSearch />}
 				/>
 			</div>
