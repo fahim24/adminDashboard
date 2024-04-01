@@ -14,3 +14,4 @@
 - Slick Carousel
 - React icons
 - fakerjs
+- fullcalendar

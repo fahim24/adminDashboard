@@ -3,6 +3,7 @@ import React from "react";
 // Import from next
 import { Metadata } from "next";
 import TeamMemberCard from "@/modules/components/TeamMemberCard";
+import Link from "next/link";
 
 // Title and Metadata for the Team Page
 export const metadata: Metadata = {
@@ -102,7 +103,11 @@ export default function TeamPage() {
 			{/* Page Heading Start */}
 			<div className="flex justify-between items-center mb-10">
 				<p className="text-3xl text-CDark font-bold">Team</p>
-				<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">Add New Member</button>
+				<Link href="/team/new-member">
+					<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">
+						Add New Member
+					</button>
+				</Link>
 			</div>
 			{/* Page Content Start */}
 			<div className="grid grid-cols-4 gap-5">

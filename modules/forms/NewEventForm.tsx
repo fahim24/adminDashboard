@@ -2,63 +2,55 @@ import React from "react";
 import Link from "next/link";
 import UploadPhoto from "@/modules/buttons/UploadPhoto";
 
-export default function NewContactForm() {
+export default function NewEventForm() {
 	return (
 		<div className="bg-white w-full p-10 rounded-lg ">
 			<form className="flex flex-col gap-10 w-[800px] mx-auto">
 				<UploadPhoto />
 				<div className="grid grid-cols-2 gap-10">
 					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">First Name</label>
+						<label className="font-semibold text-CLight">Event Name</label>
 						<input
 							type="text"
 							className="bg-CBG p-3 border text-sm rounded"
-							placeholder="Enter Your First Name"
+							placeholder="Enter Event Name"
 						/>
 					</div>
 					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">Last Name</label>
+						<label className="font-semibold text-CLight">Time </label>
 						<input
 							type="text"
 							className="bg-CBG p-3 border text-sm rounded"
-							placeholder="Enter Your Last Name"
+							placeholder="Enter Event Time"
 						/>
 					</div>
 					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">Your Email</label>
+						<label className="font-semibold text-CLight">Date</label>
 						<input
 							type="text"
 							className="bg-CBG p-3 border text-sm rounded"
-							placeholder="Enter Your Email"
+							placeholder="Enter Event Date"
 						/>
 					</div>
 					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">Phone Number</label>
+						<label className="font-semibold text-CLight">Address</label>
 						<input
 							type="text"
 							className="bg-CBG p-3 border text-sm rounded"
-							placeholder="Enter Your Phone Number"
+							placeholder="Enter Event Address"
 						/>
 					</div>
 					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">Date of Birth</label>
+						<label className="font-semibold text-CLight">Contact Number</label>
 						<input
 							type="text"
 							className="bg-CBG p-3 border text-sm rounded"
-							placeholder="Enter Your Date of Birth"
+							placeholder="Enter Contact Number"
 						/>
-					</div>
-					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">Gender</label>
-						<select className="bg-CBG p-3 border text-sm rounded w-1/2">
-							<option value="male">Male</option>
-							<option value="female">Female</option>
-							<option value="other">Other</option>
-						</select>
 					</div>
 					<div></div>
 				</div>
-				<Link href="/contacts" className="mx-auto">
+				<Link href="/calendar" className="mx-auto">
 					<button className="bg-CBlue text-white font-semibold  px-10 py-3 rounded-lg">
 						Add now
 					</button>

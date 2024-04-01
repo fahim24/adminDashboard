@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import UploadPhoto from "@/modules/buttons/UploadPhoto";
 
-export default function NewContactForm() {
+export default function NewMemberForm() {
 	return (
 		<div className="bg-white w-full p-10 rounded-lg ">
 			<form className="flex flex-col gap-10 w-[800px] mx-auto">
@@ -41,11 +41,11 @@ export default function NewContactForm() {
 						/>
 					</div>
 					<div className="flex flex-col gap-2">
-						<label className="font-semibold text-CLight">Date of Birth</label>
+						<label className="font-semibold text-CLight">Position</label>
 						<input
 							type="text"
 							className="bg-CBG p-3 border text-sm rounded"
-							placeholder="Enter Your Date of Birth"
+							placeholder="Enter Your Position"
 						/>
 					</div>
 					<div className="flex flex-col gap-2">
@@ -58,7 +58,7 @@ export default function NewContactForm() {
 					</div>
 					<div></div>
 				</div>
-				<Link href="/contacts" className="mx-auto">
+				<Link href="/team" className="mx-auto">
 					<button className="bg-CBlue text-white font-semibold  px-10 py-3 rounded-lg">
 						Add now
 					</button>

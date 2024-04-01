@@ -2,6 +2,7 @@
 import React from "react";
 // Import from next
 import { Metadata } from "next";
+import EventCalendar from "@/modules/components/EventCalendar";
 
 // Title and Metadata for the Calendar Page
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function CalendarPage() {
 			{/* Page Heading Start */}
 			<p className="text-3xl text-CDark font-bold">Calendar</p>
 			{/* Page Content Start */}
-
+			<EventCalendar />
 			{/* Page Content End */}
 		</div>
 	);
