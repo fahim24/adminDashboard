@@ -10,7 +10,7 @@ export default function PagesLayout({
 	return (
 		<MenuToggleProvider>
 			<div className=" flex bg-CBG">
-				<div className="w-fit">
+				<div className="w-fit hidden md:block">
 					<Sidenav />
 				</div>
 				<div className=" flex-auto">

@@ -1,5 +1,5 @@
 import React from "react";
-import ToggleButton from "./buttons/ToggleButton";
+import ToggleButton from "@/modules/buttons/ToggleButton";
 import { Badge, Divider, Input, Popover, Select } from "antd";
 import { CiCircleChevDown, CiSearch } from "react-icons/ci";
 import {
@@ -88,9 +88,13 @@ const Topnav: React.FC = () => {
 		<div className="flex justify-between w-full bg-white px-5 py-2 items-center sticky top-0 z-10 shadow-sm ">
 			<div className="flex gap-4 items-center">
 				<ToggleButton />
-				<Input placeholder="Search" className="bg-CBG rounded-full w-80" prefix={<CiSearch />} />
+				<Input
+					placeholder="Search"
+					className="bg-CBG rounded-full hidden md:flex w-80"
+					prefix={<CiSearch />}
+				/>
 			</div>
-			<div className="flex gap-6 items-center">
+			<div className="flex gap-2 md:gap-6 items-center">
 				<div className="cursor-pointer">
 					<Popover placement="bottom" content={notiContent} title="Notification" trigger="click">
 						<Badge count={6} size="small" offset={[-4, 2]}>
@@ -101,7 +105,7 @@ const Topnav: React.FC = () => {
 				<div className="lang">
 					<Select
 						defaultValue="en"
-						className="w-36"
+						className="w-fit md:w-36"
 						suffixIcon={<FaAngleDown className="text-lg text-CDark" />}
 						options={[
 							{
@@ -112,8 +116,8 @@ const Topnav: React.FC = () => {
 										value: "en",
 										label: (
 											<span className="flex items-center gap-2">
-												<Image src="/image/enFlag.png" width={44} height={30} alt="English Flag" />{" "}
-												English
+												<Image src="/image/enFlag.png" width={44} height={30} alt="English Flag" />
+												<span className="hidden md:inline">English</span>
 											</span>
 										),
 									},
@@ -121,8 +125,8 @@ const Topnav: React.FC = () => {
 										value: "fr",
 										label: (
 											<span className="flex items-center gap-2">
-												<Image src="/image/frFlag.png" width={44} height={30} alt="French Flag" />{" "}
-												French
+												<Image src="/image/frFlag.png" width={44} height={30} alt="French Flag" />
+												<span className="hidden md:inline">French</span>
 											</span>
 										),
 									},
@@ -130,8 +134,9 @@ const Topnav: React.FC = () => {
 										value: "es",
 										label: (
 											<span className="flex items-center gap-2">
-												<Image src="/image/esFlag.png" width={44} height={30} alt="Spanish Flag" />{" "}
-												Spanish
+												<Image src="/image/esFlag.png" width={44} height={30} alt="Spanish Flag" />
+
+												<span className="hidden md:inline">Spanish</span>
 											</span>
 										),
 									},
@@ -143,7 +148,7 @@ const Topnav: React.FC = () => {
 				<Popover placement="bottomLeft" arrow={false} content={profContent} trigger="click">
 					<div className="flex gap-3 items-center cursor-pointer">
 						<Image src="/image/pp.png" width={44} height={44} alt="Profile Picture" />
-						<div className="flex flex-col">
+						<div className="hidden md:flex flex-col">
 							<p className="text-sm font-bold">Moni Roy</p>
 							<p className="text-xs font-semibold">Admin</p>
 						</div>

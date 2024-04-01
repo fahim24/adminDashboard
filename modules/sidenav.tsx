@@ -90,6 +90,10 @@ const Sidenav: React.FC = () => {
 			setCurrentPath("/dashboard/inbox");
 		} else if (pathName.startsWith("/contacts/")) {
 			setCurrentPath("/contacts");
+		} else if (pathName.startsWith("/calendar/")) {
+			setCurrentPath("/calendar");
+		} else if (pathName.startsWith("/team/")) {
+			setCurrentPath("/team");
 		} else setCurrentPath(pathName);
 	}, [pathName]);
 

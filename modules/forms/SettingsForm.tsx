@@ -1,5 +1,6 @@
 import React from "react";
 import UploadPhoto from "@/modules/buttons/UploadPhoto";
+import Link from "next/link";
 
 export default function SettingsForm() {
 	return (
@@ -48,9 +49,11 @@ export default function SettingsForm() {
 						/>
 					</div>
 				</div>
-				<button className="bg-CBlue text-white font-semibold  px-10 py-3 rounded-lg mx-auto">
-					Save
-				</button>
+				<Link href="/dashboard" className="mx-auto">
+					<button className="bg-CBlue text-white font-semibold  px-10 py-3 rounded-lg ">
+						Save
+					</button>
+				</Link>
 			</form>
 		</div>
 	);
