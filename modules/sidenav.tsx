@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, MenuProps } from "antd";
 import { RiDashboard3Line, RiHeartLine, RiLayoutGridLine, RiSettings3Line } from "react-icons/ri";
 import { PiChats, PiGridNine, PiListChecks, PiMoneyBold, PiPower } from "react-icons/pi";
@@ -109,7 +109,7 @@ const Sidenav: React.FC = () => {
 				</div>
 			</Link>
 			<Menu
-				className="p-5 overflow-y-auto h-[calc(100%-60px)]"
+				className="py-5 px-3 overflow-y-auto h-[calc(100%-60px)]"
 				selectedKeys={[currentPath]}
 				mode="inline"
 				inlineCollapsed={collapsed}

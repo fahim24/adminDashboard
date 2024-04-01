@@ -2,6 +2,7 @@
 import React from "react";
 // Import from next
 import { Metadata } from "next";
+import SettingsForm from "@/modules/forms/SettingsForm";
 
 // Title and Metadata for the Settings Page
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function SettingsPage() {
 			{/* Page Heading Start */}
 			<p className="text-3xl text-CDark font-bold">General Settings</p>
 			{/* Page Content Start */}
-
+			<SettingsForm />
 			{/* Page Content End */}
 		</div>
 	);
