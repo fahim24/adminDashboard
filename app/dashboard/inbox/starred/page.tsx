@@ -3,7 +3,7 @@ import React from "react";
 // import from next
 import { Metadata } from "next";
 // import from antd
-import { Card, Input, Rate } from "antd";
+import { Input } from "antd";
 // import from react-icons
 import { CiSearch } from "react-icons/ci";
 import { MdDelete, MdInfo, MdMoveToInbox } from "react-icons/md";
@@ -96,10 +96,10 @@ export default function InboxStarred() {
 			{/* Content Start */}
 			<div className="bg-white border rounded-lg">
 				{/* Search Bar and Filter Buttons Start */}
-				<div className="flex items-center justify-between p-5">
+				<div className="flex flex-col md:flex-row gap-5 items-end md:items-center justify-between p-5">
 					<Input
 						placeholder="Search mail"
-						className="bg-CBG rounded-full w-80"
+						className="bg-CBG rounded-full w-60 md:w-80"
 						prefix={<CiSearch />}
 					/>
 					<div className="bg-CBG rounded-lg divide-x border">
