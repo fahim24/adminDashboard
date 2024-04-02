@@ -16,7 +16,7 @@ export default function PricingPage() {
 			{/* Page Heading Start */}
 			<p className="text-3xl text-CDark font-bold">Pricing</p>
 			{/* Page Content Start */}
-			<div className="grid grid-cols-3 gap-5">
+			<div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
 				<Card className="text-center cardBG">
 					<div className="space-y-2">
 						<p className="text-xl font-bold">Basic</p>
