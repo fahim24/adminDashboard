@@ -20,8 +20,8 @@ export default function Message() {
 	return (
 		<div className="bg-white border rounded-lg mb-10">
 			{/* Message Header Start */}
-			<div className="flex items-center justify-between px-5 py-2.5 border-b">
-				<div className="flex items-center gap-2.5">
+			<div className="flex flex-col md:flex-row gap-5  items-center justify-between px-5 py-2.5 border-b">
+				<div className="flex items-center gap-2.5 order-2 md:order-1">
 					<Link href="/dashboard/inbox">
 						<button className="size-6 flex items-center justify-center bg-CBG hover:bg-CLight hover:bg-opacity-20 rounded">
 							<FaAngleLeft />
@@ -32,7 +32,7 @@ export default function Message() {
 						Friends
 					</div>
 				</div>
-				<div className="bg-CBG rounded-lg divide-x border">
+				<div className="bg-CBG rounded-lg divide-x border self-end order-1 md:order-2">
 					<button className="p-2 hover:bg-CLight hover:bg-opacity-20">
 						<MdMoveToInbox />
 					</button>
@@ -47,7 +47,7 @@ export default function Message() {
 			{/* Message Content Start */}
 			<div className="px-5 py-10 space-y-10">
 				{/* Message 1 */}
-				<div className="flex items-end gap-5 w-4/5 text-sm">
+				<div className="flex items-end gap-5 w-full md:w-4/5 text-sm">
 					<div className="size-10 bg-CGray rounded-full shrink-0"></div>
 					<div className="bg-CBG p-5 rounded-xl rounded-bl-none">
 						<p>
@@ -61,7 +61,7 @@ export default function Message() {
 					</div>
 				</div>
 				{/* Message 2 */}
-				<div className="w-4/5 ml-auto bg-CBlue text-white p-5 rounded-xl rounded-br-none text-sm">
+				<div className="w-full md:w-4/5 ml-auto bg-CBlue text-white p-5 rounded-xl rounded-br-none text-sm">
 					<p>
 						There are many variations of passages of Lorem Ipsum available, but the majority have
 						suffered alteration in some form, by injected humour,
@@ -71,7 +71,7 @@ export default function Message() {
 					</div>
 				</div>
 				{/* Message 3 */}
-				<div className="flex items-end gap-5 w-4/5 text-sm">
+				<div className="flex items-end gap-5 w-full md:w-4/5 text-sm">
 					<div className="size-10 bg-CGray rounded-full shrink-0"></div>
 					<div className="bg-CBG p-5 rounded-xl rounded-bl-none">
 						<p>
@@ -93,9 +93,9 @@ export default function Message() {
 				<input type="text" placeholder="Write message..." className="w-full p-2.5 text-CDark" />
 				<FaPaperclip />
 				<FaFileImage />
-				<button className="bg-CBlue rounded-lg text-white flex items-center justify-center  gap-2 w-24 h-9 shrink-0">
-					Send
-					<FaPaperPlane />
+				<button className="bg-CBlue rounded-lg text-white flex items-center justify-center  gap-2  w-8 md:w-24 h-6 md:h-9 shrink-0">
+					<span className="hidden md:inline">Send</span>
+					<FaPaperPlane className="text-xs md:text-sm" />
 				</button>
 			</div>
 		</div>
