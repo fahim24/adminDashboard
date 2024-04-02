@@ -29,11 +29,11 @@ export default function EventCalendar() {
 	]);
 
 	return (
-		<div className="flex gap-5">
-			<div className="w-1/4 bg-white rounded-xl p-5">
+		<div className="flex flex-col lg:flex-row gap-5">
+			<div className="w-full lg:w-1/4 bg-white rounded-xl p-5">
 				<Sidebar currentEvents={currentEvents} />
 			</div>
-			<div className="w-3/4 bg-white rounded-xl p-5">
+			<div className="w-full lg:w-3/4 bg-white rounded-xl p-5">
 				<FullCalendar
 					plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
 					headerToolbar={{

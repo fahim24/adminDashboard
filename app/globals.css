@@ -10,7 +10,9 @@
 		@apply mx-2 flex items-center gap-1 px-5 py-3 cursor-pointer;
 	} */
 }
-
+.fc .fc-toolbar {
+	@apply flex-col md:flex-row gap-2;
+}
 #sideMenu .ant-menu-light .ant-menu-item-selected {
 	background-color: #4880ff;
 	color: white;
