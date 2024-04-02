@@ -133,7 +133,7 @@ const InboxMenu: React.FC = () => {
 				Compose
 			</button>
 			<Menu
-				className="p-5 rounded-2xl w-64"
+				className="p-5 rounded-2xl w-full lg:w-64"
 				selectedKeys={[currentPath]}
 				mode="vertical"
 				items={items}

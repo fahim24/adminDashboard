@@ -5,7 +5,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 		<div className="space-y-5">
 			{/* Page Heading Start*/}
 			<h1 className="text-3xl text-CDark font-bold">Inbox</h1>
-			<div className="flex gap-5">
+			<div className="flex flex-col lg:flex-row gap-5">
 				<div>
 					<InboxMenu />
 				</div>
