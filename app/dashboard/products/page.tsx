@@ -35,7 +35,7 @@ export default function Products() {
 				</Card>
 			</div>
 			{/* Pdoducts Card Start */}
-			<div className="grid grid-cols-3 gap-5 ">
+			<div className="grid grid-cols-1 lg:grid-cols-3 gap-5 ">
 				{/* Product Card 1 Start */}
 				<Card className="relative h-[500px]">
 					<div className="absolute left-0 right-0 top-0">

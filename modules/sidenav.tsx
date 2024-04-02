@@ -14,8 +14,8 @@ import {
 } from "react-icons/lia";
 import Link from "next/link";
 import Image from "next/image";
-import { useMenuToggleContext } from "@/modules/Contexts/MenuToggleContext";
 import { usePathname } from "next/navigation";
+import { useMenuToggleContext } from "@/modules/Contexts/MenuToggleContext";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -81,8 +81,8 @@ const items: MenuItem[] = [
 ];
 
 const Sidenav: React.FC = () => {
-	const { collapsed } = useMenuToggleContext();
 	const pathName = usePathname();
+	const { collapsed } = useMenuToggleContext();
 	const [currentPath, setCurrentPath] = useState<string>(pathName);
 	useEffect(() => {
 		// console.log(pathName);

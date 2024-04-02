@@ -26,11 +26,23 @@ export default function PSlider(): JSX.Element {
 	return (
 		<>
 			<Slider ref={sliderRef} {...settings}>
-				<div className="">
-					<Image src="/image/product.png" alt="product image" height={317} width={361} />
+				<div className="w-full">
+					<Image
+						src="/image/product.png"
+						alt="product image"
+						height={317}
+						width={361}
+						className="mx-auto"
+					/>
 				</div>
-				<div className=" ">
-					<Image src="/image/product.png" alt="product image" height={317} width={361} />
+				<div className=" w-full ">
+					<Image
+						src="/image/product.png"
+						alt="product image"
+						height={317}
+						width={361}
+						className="mx-auto"
+					/>
 				</div>
 			</Slider>
 			<button

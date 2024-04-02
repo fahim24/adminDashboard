@@ -18,13 +18,17 @@ export default function PBSlider(): JSX.Element {
 			<Slider {...settings}>
 				<div className="px-10 text-white space-y-3">
 					<p>September 12-22</p>
-					<p className="font-bold text-4xl w-1/2">Enjoy free home delivery in this summer</p>
+					<p className="font-bold text-2xl md:text-4xl w-full lg:w-1/2">
+						Enjoy free home delivery in this summer
+					</p>
 					<p className="pb-5">Designer Dresses - Pick from trendy Designer Dress.</p>
 					<button className="bg-COrange px-7 py-2 rounded-xl  font-semibold">Get Started</button>
 				</div>
 				<div className="px-10 text-white space-y-3">
 					<p>September 12-22</p>
-					<p className="font-bold text-4xl w-1/2">Enjoy free home delivery in this summer</p>
+					<p className="font-bold text-2xl md:text-4xl w-full lg:w-1/2">
+						Enjoy free home delivery in this summer
+					</p>
 					<p className="pb-5">Designer Dresses - Pick from trendy Designer Dress.</p>
 					<button className="bg-COrange px-7 py-2 rounded-xl  font-semibold">Get Started</button>
 				</div>
