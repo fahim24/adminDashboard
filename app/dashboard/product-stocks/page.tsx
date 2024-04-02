@@ -19,8 +19,8 @@ export default function ProductStock() {
 		// product Stock Page Start
 		<div className="space-y-5">
 			{/* Page Heading Start*/}
-			<div className="flex justify-between items-center gap-5">
-				<h1 className="text-3xl text-CDark font-bold">Product Stocks</h1>
+			<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5">
+				<h1 className="text-3xl text-CDark font-bold ">Product Stocks</h1>
 				<Input
 					placeholder="Search product name"
 					className="bg-white rounded-full w-60"
@@ -28,7 +28,9 @@ export default function ProductStock() {
 				/>
 			</div>
 			{/* Product Stock Start */}
-			<ProductStockItems />
+			<div className="grid grid-cols-1">
+				<ProductStockItems />
+			</div>
 			{/* Pagination Start */}
 			<div className="flex items-center justify-between">
 				<p className="font-semibold text-CLight">Showing 1-7 of 78</p>

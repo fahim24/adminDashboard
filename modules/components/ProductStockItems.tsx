@@ -80,17 +80,17 @@ export default function ProductStockItems() {
 		},
 	];
 	return (
-		<div className="bg-white border rounded-2xl">
-			<table className="table-auto w-full  ">
-				<thead>
-					<tr className="text-left border-b">
-						<th className="px-5 py-2.5">Image</th>
-						<th>Product Name</th>
-						<th>Category</th>
-						<th>Price</th>
-						<th>Piece</th>
-						<th>Available Color</th>
-						<th>Action</th>
+		<div className="bg-white border rounded-2xl overflow-x-auto  ">
+			<table className=" w-full text-left text-CDark font-semibold whitespace-nowrap">
+				<thead className="font-bold bg-CLight bg-opacity-20 rounded-2xl">
+					<tr>
+						<th className="px-5 py-3">Image</th>
+						<th className="px-5 py-3">Product Name</th>
+						<th className="px-5 py-3">Category</th>
+						<th className="px-5 py-3">Price</th>
+						<th className="px-5 py-3">Piece</th>
+						<th className="px-5 py-3">Available Color</th>
+						<th className="px-5 py-3">Action</th>
 					</tr>
 				</thead>
 				<tbody className="divide-y text-sm">
@@ -113,22 +113,22 @@ export function ProductStockItem({
 	colors,
 }: ProductStockItemProps) {
 	return (
-		<tr className="font-semibold hover:bg-gray-100 ">
-			<td className="flex items-center gap-1 px-5 py-2.5 cursor-pointer">
+		<tr className="hover:bg-gray-100 ">
+			<td className="px-5 py-3">
 				<Image src={img} alt="Product icon" width={60} height={60} />
 			</td>
-			<td>{name}</td>
-			<td>{category}</td>
-			<td>{price}</td>
-			<td>{piece}</td>
-			<td>
+			<td className="px-5 py-3">{name}</td>
+			<td className="px-5 py-3">{category}</td>
+			<td className="px-5 py-3">{price}</td>
+			<td className="px-5 py-3">{piece}</td>
+			<td className="px-5 py-3">
 				<div className="flex gap-2.5 items-center">
 					{colors.map((color) => (
 						<span key={color} className={`size-5 rounded-full shrink-0 ${color}`}></span>
 					))}
 				</div>
 			</td>
-			<td>
+			<td className="px-5 py-3">
 				<div className="bg-white rounded-lg divide-x border w-fit">
 					<button className="py-2 px-3 text-CGray hover:bg-CLight hover:bg-opacity-5">
 						<FaRegEdit />
