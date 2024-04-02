@@ -14,7 +14,7 @@ export default function OrderStatusPicker() {
 	const statusPickerContent = (
 		<div className="space-y-5 p-5">
 			<p className="text-lg font-bold">Select Order Status</p>
-			<div className="grid grid-cols-3 gap-5 status-picker">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit mx-auto gap-5 status-picker">
 				{/* status 1 */}
 				<div className="relative inline-block w-40 h-8">
 					<input
@@ -96,7 +96,7 @@ export default function OrderStatusPicker() {
 			placement="bottom"
 			open={clicked}
 			onOpenChange={handleClickChange}>
-			<button className="p-2.5 hover:bg-CBG flex items-center justify-between gap-2.5 w-40">
+			<button className="p-2.5 hover:bg-CBG flex items-center justify-between gap-2.5 w-32 lg:w-40">
 				Order Status <FaAngleDown />
 			</button>
 		</Popover>

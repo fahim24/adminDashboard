@@ -162,7 +162,7 @@ export default function Dashboard() {
 									<th className="px-5 py-3 ">Status</th>
 								</tr>
 							</thead>
-							<tbody className="divide-y">
+							<tbody className="divide-y text-sm">
 								<tr className=" hover:bg-gray-100 ">
 									<td className="px-5 py-2 flex gap-2 items-center">
 										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />

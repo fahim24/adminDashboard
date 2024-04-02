@@ -24,7 +24,7 @@ export default function OrderList() {
 			{/* Page Heading Start*/}
 			<h1 className="text-3xl text-CDark font-bold">Order Lists</h1>
 			{/* Filter Bar Start */}
-			<div className="bg-white flex border rounded-xl w-fit divide-x text-sm font-semibold">
+			<div className="bg-white flex flex-col md:flex-row border rounded-xl w-fit divide-y md:divide-x text-sm font-semibold mx-auto md:mx-0">
 				<div className="p-2.5 hover:bg-CBG flex items-center justify-center">
 					<ImFilter />
 				</div>
@@ -36,7 +36,9 @@ export default function OrderList() {
 				<ResetFilter />
 			</div>
 			{/* Order List Start */}
-			<OrderListItems />
+			<div className="grid grid-cols-1">
+				<OrderListItems />
+			</div>
 			{/* Pagination Start */}
 			<div className="flex items-center justify-between">
 				<p className="font-semibold text-CLight">Showing 1-9 of 78</p>

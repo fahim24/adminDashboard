@@ -14,7 +14,7 @@ export default function OrderTypePicker() {
 	const typePickerContent = (
 		<div className="space-y-5 p-5">
 			<p className="text-lg font-bold">Select Order Type</p>
-			<div className="grid grid-cols-3 gap-5 type-picker">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto w-fit gap-5 type-picker">
 				{/* Type 1 */}
 				<div className="relative inline-block w-40 h-8">
 					<input id="type1" type="checkbox" name="type-pick" value="type1" className="hidden" />
@@ -87,7 +87,7 @@ export default function OrderTypePicker() {
 			placement="bottom"
 			open={clicked}
 			onOpenChange={handleClickChange}>
-			<button className="p-2.5 hover:bg-CBG flex items-center justify-between gap-2.5 w-40">
+			<button className="p-2.5 hover:bg-CBG flex items-center justify-between gap-2.5 w-32 lg:w-40">
 				Order Type <FaAngleDown />
 			</button>
 		</Popover>

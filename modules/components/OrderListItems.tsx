@@ -85,16 +85,16 @@ export default function OrderListItems() {
 		},
 	];
 	return (
-		<div className="bg-white border rounded-2xl">
-			<table className="table-auto w-full  ">
-				<thead>
-					<tr className="text-left border-b">
-						<th className="px-5 py-2.5">ID</th>
-						<th>NAME</th>
-						<th>ADDRESS</th>
-						<th>DATE</th>
-						<th>TYPE</th>
-						<th>STATUS</th>
+		<div className="bg-white border rounded-2xl overflow-x-auto  ">
+			<table className=" w-full text-left text-CDark font-semibold whitespace-nowrap">
+				<thead className="font-bold bg-CLight bg-opacity-20 rounded-2xl">
+					<tr>
+						<th className="px-5 py-3">ID</th>
+						<th className="px-5 py-3">NAME</th>
+						<th className="px-5 py-3">ADDRESS</th>
+						<th className="px-5 py-3">DATE</th>
+						<th className="px-5 py-3">TYPE</th>
+						<th className="px-5 py-3">STATUS</th>
 					</tr>
 				</thead>
 				<tbody className="divide-y text-sm">
@@ -110,13 +110,13 @@ export default function OrderListItems() {
 // export function OrderItem({ id, name, address, date, type, status }: OrderItemProps) {
 export function OrderItem({ id, name, address, date, type, status }: OrderItemProps) {
 	return (
-		<tr className="font-semibold hover:bg-gray-100 ">
-			<td className="flex items-center gap-1 p-5 cursor-pointer">{id}</td>
-			<td>{name}</td>
-			<td>{address}</td>
-			<td>{date}</td>
-			<td>{type}</td>
-			<td>{status}</td>
+		<tr className="hover:bg-gray-100 ">
+			<td className="px-5 py-3">{id}</td>
+			<td className="px-5 py-3">{name}</td>
+			<td className="px-5 py-3">{address}</td>
+			<td className="px-5 py-3">{date}</td>
+			<td className="px-5 py-3">{type}</td>
+			<td className="px-5 py-3">{status}</td>
 		</tr>
 	);
 }

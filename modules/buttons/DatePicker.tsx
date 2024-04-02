@@ -9,7 +9,7 @@ export default function DatePickerButton() {
 	};
 
 	return (
-		<div className="p-2.5 hover:bg-CBG date-filter w-40 cursor-pointer">
+		<div className="p-2.5 hover:bg-CBG date-filter flex justify-center items-center w-32 lg:w-40 cursor-pointer">
 			<DatePicker
 				// needConfirm
 				onChange={onChange}
