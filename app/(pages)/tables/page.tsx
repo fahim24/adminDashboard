@@ -19,9 +19,13 @@ export default function TablePage() {
 			<p className="text-3xl text-CDark font-bold">Table</p>
 			<Divider style={{ borderWidth: 2 }} />
 			{/* Page Content Start */}
-			<OrderListItems />
+			<div className="grid grid-cols-1">
+				<OrderListItems />
+			</div>
 			<Divider style={{ borderWidth: 2 }} />
-			<ProductStockItems />
+			<div className="grid grid-cols-1">
+				<ProductStockItems />
+			</div>
 			{/* Page Content End */}
 		</div>
 	);

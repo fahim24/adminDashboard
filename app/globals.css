@@ -17,14 +17,16 @@
 	background-color: #4880ff;
 	color: white;
 }
-#sideMenu > ::-webkit-scrollbar {
+
+.scrollbar::-webkit-scrollbar {
+	height: 10px;
 	width: 5px;
 }
-#sideMenu > ::-webkit-scrollbar-track {
+.scrollbar::-webkit-scrollbar-track {
 	background: #b5b5b5;
 	border-radius: 5px;
 }
-#sideMenu > ::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
 	background: #4880ff;
 	border-radius: 5px;
 }

@@ -48,46 +48,50 @@ export default function InvoicePage() {
 			{/* Page Heading Start */}
 			<p className="text-3xl text-CDark font-bold">Invoice</p>
 			{/* Page Content Start */}
-			<div className="bg-white rounded-xl p-5">
-				<div className="grid grid-cols-3 gap-5 items-center px-10 mb-10">
-					<div>
+			<div className="bg-white rounded-xl p-5  grid grid-cols-1">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center px-10 mb-10 w-full">
+					<div className=" px-5">
 						<p className="font-semibold mb-3">Invoice From:</p>
-						<p className="font-bold">Virginia Walker</p>
+						<p className="font-bold whitespace-nowrap">Virginia Walker</p>
 						<p className="text-CLight font-semibold">9694 Krajcik Locks Suite 635</p>
 					</div>
-					<div>
+					<div className=" px-5">
 						<p className="font-semibold mb-3">Invoice To:</p>
-						<p className="font-bold">Austin Miller</p>
+						<p className="font-bold whitespace-nowrap">Austin Miller</p>
 						<p className="text-CLight font-semibold">Brookview</p>
 					</div>
-					<div>
-						<p className="font-semibold">Invoice Date : 12 Nov 2019</p>
-						<p className="font-semibold">Due Date : 25 Dec 2019</p>
+					<div className=" px-5">
+						<p className="font-semibold whitespace-nowrap">Invoice Date : 12 Nov 2019</p>
+						<p className="font-semibold whitespace-nowrap">Due Date : 25 Dec 2019</p>
 					</div>
 				</div>
-				<table className="table-auto w-full  ">
-					<thead>
-						<tr className=" bg-CBG">
-							<th className="px-5 py-2.5 rounded-tl-lg rounded-bl-lg">Serial No.</th>
-							<th>Description</th>
-							<th>Quantity</th>
-							<th>Base Cost</th>
-							<th className="rounded-tr-lg rounded-br-lg">Total Cost</th>
-						</tr>
-					</thead>
-					<tbody className=" text-sm">
-						{invoiceItems.map((item) => (
-							<InvoiceItem key={item.id} {...item} />
-						))}
-					</tbody>
-					<tfoot>
-						<tr>
-							<td className="font-bold p-5 pr-20  text-right colspan=5 " colSpan={5}>
-								Total = $4640
-							</td>
-						</tr>
-					</tfoot>
-				</table>
+				<div className="overflow-x-auto scrollbar">
+					<table className="w-full text-center text-CDark font-semibold whitespace-nowrap">
+						<thead className="font-bold bg-CBG rounded-xl">
+							<tr>
+								<th className="px-5 py-3">Serial No.</th>
+								<th className="px-5 py-3">Description</th>
+								<th className="px-5 py-3">Quantity</th>
+								<th className="px-5 py-3">Base Cost</th>
+								<th className="px-5 py-3">Total Cost</th>
+							</tr>
+						</thead>
+						<tbody className="divide-y text-sm">
+							{invoiceItems.map((item) => (
+								<InvoiceItem key={item.id} {...item} />
+							))}
+						</tbody>
+						<tfoot className="font-bold border-t">
+							<tr>
+								<td className="p-5 text-right" colSpan={3}>
+									Total
+								</td>
+								<td className="p-5">=</td>
+								<td className="p-5">$4640</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 				<div className="flex items-center justify-end  my-10 gap-4">
 					<button className="p-3 border bg-CBG rounded-lg">
 						<MdPrint />

@@ -5,9 +5,9 @@ import UploadPhoto from "@/modules/buttons/UploadPhoto";
 export default function NewMemberForm() {
 	return (
 		<div className="bg-white w-full p-10 rounded-lg ">
-			<form className="flex flex-col gap-10 w-[800px] mx-auto">
+			<form className="flex flex-col gap-10 w-full lg:w-[800px] mx-auto">
 				<UploadPhoto />
-				<div className="grid grid-cols-2 gap-10">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 					<div className="flex flex-col gap-2">
 						<label className="font-semibold text-CLight">First Name</label>
 						<input

@@ -36,28 +36,28 @@ export default function InboxMail({ rate, name, description, label, time }: Inbo
 
 export const PrimaryLabel = () => {
 	return (
-		<div className="w-16 h-6 flex justify-center items-center  bg-CGreen bg-opacity-20 text-CGreen rounded font-semibold text-xs">
+		<div className="w-16 h-6 flex justify-center items-center  bg-CGreen bg-opacity-20 text-CGreen rounded font-semibold text-xs shrink-0">
 			Primary
 		</div>
 	);
 };
 export const WorkLabel = () => {
 	return (
-		<div className="w-16 h-6 flex justify-center items-center  bg-COrange bg-opacity-20 text-COrange rounded font-semibold text-xs">
+		<div className="w-16 h-6 flex justify-center items-center  bg-COrange bg-opacity-20 text-COrange rounded font-semibold text-xs shrink-0">
 			Work
 		</div>
 	);
 };
 export const FriendsLabel = () => {
 	return (
-		<div className="w-16 h-6 flex justify-center items-center  bg-CPurple bg-opacity-20 text-CPurple rounded font-semibold text-xs">
+		<div className="w-16 h-6 flex justify-center items-center  bg-CPurple bg-opacity-20 text-CPurple rounded font-semibold text-xs shrink-0">
 			Friends
 		</div>
 	);
 };
 export const SocialLabel = () => {
 	return (
-		<div className="w-16 h-6 flex justify-center items-center  bg-CBlue bg-opacity-20 text-CBlue rounded font-semibold text-xs">
+		<div className="w-16 h-6 flex justify-center items-center  bg-CBlue bg-opacity-20 text-CBlue rounded font-semibold text-xs shrink-0">
 			Social
 		</div>
 	);

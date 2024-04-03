@@ -150,7 +150,7 @@ export default function Dashboard() {
 							]}
 						/>
 					</div>
-					<div className="overflow-x-auto  rounded-xl">
+					<div className="overflow-x-auto  rounded-xl scrollbar">
 						<table className=" w-full text-left text-CDark font-semibold whitespace-nowrap">
 							<thead className="font-bold bg-CBG rounded-xl">
 								<tr>
@@ -163,7 +163,7 @@ export default function Dashboard() {
 								</tr>
 							</thead>
 							<tbody className="divide-y text-sm">
-								<tr className=" hover:bg-gray-100 ">
+								<tr className="hover:bg-gray-100">
 									<td className="px-5 py-2 flex gap-2 items-center">
 										<Image src="/image/productIcon.png" alt="Product icon" width={36} height={36} />
 										Apple Watch

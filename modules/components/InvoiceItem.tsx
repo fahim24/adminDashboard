@@ -16,12 +16,12 @@ export default function InvoiceItem({
 	totalCost,
 }: InvoiceItemProps) {
 	return (
-		<tr className="font-semibold text-center border-b">
-			<td className=" p-5 ">{id}</td>
-			<td>{description}</td>
-			<td>{quantity}</td>
-			<td>{`$${baseCost}`}</td>
-			<td>{`$${totalCost}`}</td>
+		<tr className=" hover:bg-gray-100 ">
+			<td className="p-5 ">{id}</td>
+			<td className="p-5 ">{description}</td>
+			<td className="p-5 ">{quantity}</td>
+			<td className="p-5 ">{`$${baseCost}`}</td>
+			<td className="p-5 ">{`$${totalCost}`}</td>
 		</tr>
 	);
 }

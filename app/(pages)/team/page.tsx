@@ -110,7 +110,7 @@ export default function TeamPage() {
 				</Link>
 			</div>
 			{/* Page Content Start */}
-			<div className="grid grid-cols-4 gap-5">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 				{teamMembers.map((member) => (
 					// eslint-disable-next-line react/jsx-key
 					<TeamMemberCard {...member} />

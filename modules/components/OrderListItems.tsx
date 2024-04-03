@@ -85,7 +85,7 @@ export default function OrderListItems() {
 		},
 	];
 	return (
-		<div className="bg-white border rounded-2xl overflow-x-auto  ">
+		<div className="bg-white border rounded-2xl overflow-x-auto scrollbar">
 			<table className=" w-full text-left text-CDark font-semibold whitespace-nowrap">
 				<thead className="font-bold bg-CLight bg-opacity-20 rounded-2xl">
 					<tr>

@@ -113,7 +113,7 @@ const Sidenav: React.FC = () => {
 				</div>
 			</Link>
 			<Menu
-				className="py-5 px-3 overflow-y-auto h-[calc(100%-60px)]"
+				className="py-5 px-3 overflow-y-auto scrollbar h-[calc(100%-60px)]"
 				selectedKeys={[currentPath]}
 				mode="inline"
 				inlineCollapsed={collapsed}

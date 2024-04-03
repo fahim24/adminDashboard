@@ -20,11 +20,11 @@ export default function StarredMail({ name, description, time }: StarredMailProp
 				</Link>
 			</div>
 			<Link href="/dashboard/inbox/message" className="w-full lg:w-3/4 pl-6 lg:pl-0">
-				<div className="flex flex-col md:flex-row items-end md:items-center justify-between gap-2.5 w-full">
+				<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2.5 w-full">
 					<div className="flex gap-2.5 items-center">
 						<p className="font-semibold">{description}</p>
 					</div>
-					<p className="font-semibold text-CLight">{time}</p>
+					<p className="font-semibold text-CLight self-end">{time}</p>
 				</div>
 			</Link>
 		</div>
