@@ -23,7 +23,7 @@
 	width: 5px;
 }
 .scrollbar::-webkit-scrollbar-track {
-	background: #b5b5b5;
+	background: #f2f2f2;
 	border-radius: 5px;
 }
 .scrollbar::-webkit-scrollbar-thumb {

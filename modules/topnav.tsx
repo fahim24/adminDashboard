@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import { FaGear } from "react-icons/fa6";
 import { BsArrowRepeat } from "react-icons/bs";
+import Link from "next/link";
 
 const notiContent = (
 	<div className="space-y-4">
@@ -76,10 +77,12 @@ const profContent = (
 			<BsArrowRepeat className="text-CPurple font-bold text-lg" />
 			<p className=" font-semibold">Activity Log </p>
 		</div>
-		<div className="flex items-center gap-2 cursor-pointer text-base p-3">
-			<FaSignOutAlt className="text-CRed  text-lg" />
-			<p className=" font-semibold">Log out</p>
-		</div>
+		<Link href="/logout">
+			<div className="flex items-center gap-2 cursor-pointer text-base p-3">
+				<FaSignOutAlt className="text-CRed  text-lg" />
+				<p className=" font-semibold">Log out</p>
+			</div>
+		</Link>
 	</div>
 );
 
