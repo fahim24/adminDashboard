@@ -11,7 +11,7 @@ type TeamMemberCardProps = {
 
 export default function TeamMemberCard({ img, name, designation, email }: TeamMemberCardProps) {
 	return (
-		<div className="bg-white rounded-lg p-5 cardBG">
+		<div className="bg-white rounded-lg p-5 cardBG cursor-pointer">
 			<div className="size-[110px]  mx-auto my-5">
 				<Image src={img} alt="Team Member image" width={110} height={110}></Image>
 			</div>

@@ -4,7 +4,7 @@
 
 @layer components {
 	.btn {
-		@apply flex items-center justify-center px-4 py-2 bg-CBlue text-white rounded-lg font-semibold gap-2.5;
+		@apply flex items-center justify-center px-4 py-2 bg-CBlue text-white rounded-lg font-semibold gap-2.5 hover:bg-CDark;
 	}
 	/* .td-class {
 		@apply mx-2 flex items-center gap-1 px-5 py-3 cursor-pointer;

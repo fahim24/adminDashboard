@@ -19,9 +19,7 @@ const SignInButton: React.FC = () => {
 
 	return (
 		// <button>
-		<button
-			onClick={() => Login()}
-			className="bg-CBlue py-3 px-5 w-3/4 mx-auto flex items-center justify-center text-white font-bold rounded-xl mb-3">
+		<button onClick={() => Login()} className="btn w-3/4 mx-auto mb-3">
 			Sign In
 		</button>
 	);

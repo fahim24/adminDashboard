@@ -56,7 +56,7 @@ export default function ToDoPage() {
 			{/* Page Heading Start */}
 			<div className="flex justify-between items-center mb-10">
 				<p className="text-3xl text-CDark font-bold">To-Do List</p>
-				<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">Add New Task</button>
+				<button className="btn">Add New Task</button>
 			</div>
 			{/* Page Content Start */}
 			<div className="space-y-5 mb-10">

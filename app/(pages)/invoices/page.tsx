@@ -93,7 +93,7 @@ export default function InvoicePage() {
 					</table>
 				</div>
 				<div className="flex items-center justify-end  my-10 gap-4">
-					<button className="p-3 border bg-CBG rounded-lg">
+					<button className="p-3 border bg-CBG rounded-lg hover:bg-gray-200">
 						<MdPrint />
 					</button>
 					<button className="p-2 bg-CBlue rounded-lg text-white font-semibold flex items-center">

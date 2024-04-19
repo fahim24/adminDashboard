@@ -53,7 +53,9 @@ export default function Products() {
 							<RiHeartLine />
 						</button>
 					</div>
-					<button className="bg-CBG px-7 py-2 rounded-xl font-semibold mt-4">Edit Product</button>
+					<button className="bg-CBG px-7 py-2 rounded-xl font-semibold mt-4 border border-transparent hover:border-CDark">
+						Edit Product
+					</button>
 				</Card>
 				{/* Product Card 2 Start */}
 				<Card className="relative h-[500px]">
@@ -72,7 +74,9 @@ export default function Products() {
 							<RiHeartLine />
 						</button>
 					</div>
-					<button className="bg-CBG px-7 py-2 rounded-xl font-semibold mt-4">Edit Product</button>
+					<button className="bg-CBG px-7 py-2 rounded-xl font-semibold mt-4 border border-transparent hover:border-CDark">
+						Edit Product
+					</button>
 				</Card>
 				{/* Product Card 3 Start */}
 				<Card className="relative h-[500px]">
@@ -91,7 +95,9 @@ export default function Products() {
 							<RiHeartLine />
 						</button>
 					</div>
-					<button className="bg-CBG px-7 py-2 rounded-xl font-semibold mt-4">Edit Product</button>
+					<button className="bg-CBG px-7 py-2 rounded-xl font-semibold mt-4 border border-transparent hover:border-CDark">
+						Edit Product
+					</button>
 				</Card>
 			</div>
 			{/* Page Content End */}

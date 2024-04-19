@@ -51,9 +51,7 @@ export default function NewEventForm() {
 					<div></div>
 				</div>
 				<Link href="/calendar" className="mx-auto">
-					<button className="bg-CBlue text-white font-semibold  px-10 py-3 rounded-lg">
-						Add now
-					</button>
+					<button className="btn px-10 py-3">Add now</button>
 				</Link>
 			</form>
 		</div>

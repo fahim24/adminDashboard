@@ -128,7 +128,7 @@ const InboxMenu: React.FC = () => {
 	}, [pathName]);
 	return (
 		<div id="inboxMenu" className="bg-white pt-5 rounded-lg">
-			<button className="bg-CBlue text-white flex gap-2 items-center justify-center rounded-lg mx-auto  py-2 w-4/5">
+			<button className="btn mx-auto w-4/5">
 				<FaPlus />
 				Compose
 			</button>

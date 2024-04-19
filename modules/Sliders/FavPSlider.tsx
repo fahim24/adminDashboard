@@ -46,14 +46,14 @@ export default function FavPSlider(): JSX.Element {
 				</div>
 			</Slider>
 			<button
-				className="absolute top-1/2 right-2  size-10 flex justify-center items-center bg-CBG rounded-full cursor-pointer slick-arrow"
+				className="absolute top-1/2 right-2  size-10 flex justify-center items-center bg-CBG rounded-full cursor-pointer slick-arrow group"
 				onClick={next}>
-				<FaAngleRight className="text-lg" />
+				<FaAngleRight className="text-lg group-hover:text-CBlue" />
 			</button>
 			<button
-				className="absolute top-1/2  left-2 size-10 flex justify-center items-center bg-CBG rounded-full cursor-pointer slick-arrow"
+				className="absolute top-1/2  left-2 size-10 flex justify-center items-center bg-CBG rounded-full cursor-pointer slick-arrow group"
 				onClick={previous}>
-				<FaAngleLeft className="text-lg" />
+				<FaAngleLeft className="text-lg group-hover:text-CBlue" />
 			</button>
 		</>
 	);

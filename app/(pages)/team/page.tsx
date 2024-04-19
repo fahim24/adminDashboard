@@ -104,9 +104,7 @@ export default function TeamPage() {
 			<div className="flex justify-between items-center mb-10">
 				<p className="text-3xl text-CDark font-bold">Team</p>
 				<Link href="/team/new-member">
-					<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">
-						Add New Member
-					</button>
+					<button className="btn text-sm">Add New Member</button>
 				</Link>
 			</div>
 			{/* Page Content Start */}

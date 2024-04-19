@@ -10,7 +10,7 @@ type ContactCardProps = {
 
 export default function ContactCard({ img, name, email }: ContactCardProps) {
 	return (
-		<div className="bg-white rounded-lg">
+		<div className="bg-white rounded-lg cursor-pointer">
 			<Image src={img} alt="contact image" width={300} height={275} className="w-full"></Image>
 			<div className="p-4 text-center space-y-1">
 				<p className="font-bold">{name}</p>

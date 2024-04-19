@@ -50,9 +50,7 @@ export default function SettingsForm() {
 					</div>
 				</div>
 				<Link href="/dashboard" className="mx-auto">
-					<button className="bg-CBlue text-white font-semibold  px-10 py-3 rounded-lg ">
-						Save
-					</button>
+					<button className="btn px-10 py-3">Save</button>
 				</Link>
 			</form>
 		</div>

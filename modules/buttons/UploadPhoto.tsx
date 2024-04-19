@@ -55,7 +55,7 @@ export default function UploadPhoto() {
 					id="upload-button"
 					aria-labelledby="image"
 					aria-describedby="image"
-					className="border-none text-CBlue font-semibold ">
+					className="border-none text-CBlue font-semibold hover:underline">
 					Upload Photo
 				</button>
 			</div>

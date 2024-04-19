@@ -53,9 +53,7 @@ function Sidebar({ currentEvents }: any) {
 	return (
 		<>
 			<Link href="/calendar/new-event">
-				<button className="bg-CBlue py-2 flex item justify-center rounded-lg w-full text-white mb-5">
-					Add New Event
-				</button>
+				<button className="btn w-full mb-5">Add New Event</button>
 			</Link>
 			<h2 className="font-bold mb-3 text-xl">All Events ({currentEvents.length})</h2>
 			<div className="divide-y">
@@ -69,7 +67,7 @@ function Sidebar({ currentEvents }: any) {
 
 function SidebarEvent({ event }: any) {
 	return (
-		<div key={event.id} className="flex gap-2 py-5">
+		<div key={event.id} className="flex gap-2 py-5 ">
 			<div className="size-10 bg-CGray rounded-full"></div>
 			<div>
 				<b>{event.title}</b>

@@ -56,9 +56,7 @@ export default function ContactsPage() {
 			<div className="flex justify-between items-center mb-10">
 				<p className="text-3xl text-CDark font-bold">Contact</p>
 				<Link href="/contacts/new-contact">
-					<button className="bg-CBlue text-white px-5 py-2.5 rounded text-sm">
-						Add New Contact
-					</button>
+					<button className="btn">Add New Contact</button>
 				</Link>
 			</div>
 			{/* Page Content Start */}

@@ -43,9 +43,7 @@ export default function RegisterPage() {
 					<label>I accept terms and conditions</label>
 				</div>
 				<Link href="/login" className="block w-3/4 mb-3 mx-auto">
-					<button className="bg-CBlue py-3 px-5 w-full  text-white font-bold rounded-xl ">
-						Sign Up
-					</button>
+					<button className="btn w-full">Sign Up</button>
 				</Link>
 
 				<div className="text-CLight flex flex-col md:flex-row items-center justify-center gap-2">
